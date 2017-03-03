@@ -105,7 +105,7 @@ public class Grapple : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Fire2"))
+        if (Input.GetButtonUp("Fire1"))
         {
             Destroy(hookLandObj.GetComponent<HingeJoint>());
             Destroy(hookLandObj.GetComponent<Rigidbody>());
