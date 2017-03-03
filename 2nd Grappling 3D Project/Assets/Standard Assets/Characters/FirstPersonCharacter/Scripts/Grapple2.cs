@@ -82,3 +82,34 @@ jointsArray[jointsArray.Count - 1].GetComponent<HingeJoint>().connectedBody = ho
 */
 
 //jointsArray[0].GetComponent<HingeJoint>().connectedBody = player.GetComponent<Rigidbody>();
+/**
+    for (int i = 0; i<joints.Length; i++)
+                {
+                    joints[i] = new GameObject("Joint" + i);
+joints[i].AddComponent<Rigidbody>();
+                    joints[i].AddComponent<HingeJoint>();
+                    joints[i].GetComponent<HingeJoint>().enablePreprocessing = false;
+                    joints[i].GetComponent<HingeJoint>().useSpring = true;
+
+                    if (i == joints.Length - 1)
+                    {
+                        joints[i].GetComponent<HingeJoint>().connectedBody = hookLandObj.GetComponent<Rigidbody>();
+                        joints[i].transform.position = lineHit;
+                        //hookLandObj.GetComponent<HingeJoint>().connectedBody = joints[i].GetComponent<Rigidbody>();
+                    }
+                }
+                player.AddComponent<HingeJoint>();
+                player.GetComponent<HingeJoint>().connectedBody = joints[0].GetComponent<Rigidbody>();
+                player.GetComponent<HingeJoint>().enablePreprocessing = false;
+                joints[0].GetComponent<HingeJoint>().connectedBody = joints[1].GetComponent<Rigidbody>();
+                joints[joints.Length - 1].GetComponent<HingeJoint>().connectedBody = hookLandObj.GetComponent<Rigidbody>();
+                joints[0].transform.position = new Vector3(playerPos.x, playerPos.y, playerPos.z);
+//Debug.Log(playerPos);
+//Debug.Log(joints[0].transform.position);
+joints[1].transform.position = new Vector3(lineHit.x, lineHit.y, lineHit.z);
+//Debug.Log(lineHit);
+//Debug.Log(joints[1].transform.position);
+hookLandObj.GetComponent<Rigidbody>().isKinematic = true;
+                //hookLandObj.GetComponent<HingeJoint>().connectedBody = joints[joints.Length - 1].GetComponent<Rigidbody>();
+            }
+    */

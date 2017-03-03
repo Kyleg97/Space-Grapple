@@ -13,14 +13,17 @@ public class Grapple : MonoBehaviour
     private LineRenderer line;
     private Vector3 lineHit;
     private Vector3 playerPos;
-    public GameObject[] joints;
-    private Vector3 jointLocation;
+    private GameObject joint1;
+    private GameObject middleJoint;
+    private GameObject joint2;
     public static bool attached;
     public bool attached2;
+    Vector3 hookLandObjPos;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //player = GameObject.Find("RigidBodyFPSController");
         player = GameObject.Find("RigidBodyFPSController");
         rb.isKinematic = false;
         attached = false;
@@ -58,73 +61,54 @@ public class Grapple : MonoBehaviour
                 if (hit.collider.gameObject)
                 {
                     hookLandObj = hit.collider.gameObject;
+                    hookLandObjPos = hookLandObj.transform.position;
                     attached = true;
                 }
 
                 if (!hookLandObj.GetComponent<Rigidbody>())
                 {
                     hookLandObj.AddComponent<Rigidbody>();
+                    hookLandObj.GetComponent<Rigidbody>().isKinematic = true;
                 }
 
-                if (!hookLandObj.GetComponent<HingeJoint>())
-                {
-                    hookLandObj.AddComponent<HingeJoint>();
-                }
+                hookLandObj.AddComponent<HingeJoint>();
 
-                for (int i = 0; i < joints.Length; i++)
-                {
-                    joints[i] = new GameObject("Joint" + i);
-                    joints[0].transform.position = player.transform.position;
-                    joints[i].AddComponent<Rigidbody>();
-                    joints[i].AddComponent<HingeJoint>();
-                    HingeJoint connectedJoint = joints[i].GetComponent<HingeJoint>();
-                    connectedJoint.useSpring = true;
-                    //connectedJoint.spring //left off here!
-                    if (i > 0 && i < joints.Length - 1)
-                    {
-                        connectedJoint.connectedBody = joints[i - 1].GetComponent<Rigidbody>();
-                    }
+                joint1 = new GameObject("Joint1");
+                middleJoint = new GameObject("MiddleJoint");
+                joint2 = new GameObject("Joint2");
+                joint1.transform.position = new Vector3(playerPos.x, playerPos.y, playerPos.z);
+                joint2.transform.position = new Vector3(hookLandObjPos.x, hookLandObjPos.y, hookLandObjPos.z);
+                middleJoint.transform.position = 
+                    new Vector3((playerPos.x + hookLandObjPos.x) / 2, (playerPos.y + hookLandObjPos.y) / 2, (playerPos.z + hookLandObjPos.z) / 2);
 
-                    if (i == 0)
-                    {
-                        connectedJoint.connectedBody = player.GetComponent<Rigidbody>();
-                    }
+                joint1.AddComponent<Rigidbody>();
+                joint1.AddComponent<HingeJoint>();
+                joint1.GetComponent<HingeJoint>().enablePreprocessing = false;
 
-                    if (i == joints.Length - 1)
-                    {
-                        //connectedJoint.connectedBody = hookLandObj.GetComponent<Rigidbody>();
-                        hookLandObj.GetComponent<HingeJoint>().connectedBody = joints[i].GetComponent<Rigidbody>();
-                    }
+                joint2.AddComponent<Rigidbody>();
+                joint2.AddComponent<HingeJoint>();
+                joint2.GetComponent<HingeJoint>().enablePreprocessing = false;
 
-                    if (i == 1)
-                    {
-                        joints[1].transform.position = lineHit;
-                        connectedJoint.connectedBody = joints[i - 1].GetComponent<Rigidbody>();
-                    }
-                    
-                }
+                middleJoint.AddComponent<Rigidbody>();
+                middleJoint.AddComponent<HingeJoint>();
+                middleJoint.GetComponent<HingeJoint>().enablePreprocessing = false;
 
-                hookLandObj.GetComponent<Rigidbody>().isKinematic = true;
+                hookLandObj.GetComponent<HingeJoint>().connectedBody = joint2.GetComponent<Rigidbody>();
+                joint2.GetComponent<HingeJoint>().connectedBody = middleJoint.GetComponent<Rigidbody>();
+                joint1.GetComponent<HingeJoint>().connectedBody = player.GetComponent<Rigidbody>();
+                middleJoint.GetComponent<HingeJoint>().connectedBody = joint1   .GetComponent<Rigidbody>();
             }
         }
 
         if (Input.GetButtonUp("Fire2"))
         {
-                Destroy(hookLandObj.GetComponent<HingeJoint>());
-                Destroy(hookLandObj.GetComponent<Rigidbody>());
-                Destroy(line);
-                attached = false;
-
-                for (int i = 0; i < joints.Length; i++)
-                {
-                    Destroy(joints[i]);
-                }     
-        }
-
-        if (attached)
-        {
-
-        }
-            
+            Destroy(hookLandObj.GetComponent<HingeJoint>());
+            Destroy(hookLandObj.GetComponent<Rigidbody>());
+            Destroy(line);
+            Destroy(joint1);
+            Destroy(middleJoint);
+            Destroy(joint2);
+            attached = false;    
+        }            
     }
 }
