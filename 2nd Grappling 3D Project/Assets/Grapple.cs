@@ -96,7 +96,12 @@ public class Grapple : MonoBehaviour
                 hookLandObj.GetComponent<HingeJoint>().connectedBody = joint2.GetComponent<Rigidbody>();
                 joint2.GetComponent<HingeJoint>().connectedBody = middleJoint.GetComponent<Rigidbody>();
                 joint1.GetComponent<HingeJoint>().connectedBody = player.GetComponent<Rigidbody>();
-                middleJoint.GetComponent<HingeJoint>().connectedBody = joint1   .GetComponent<Rigidbody>();
+                middleJoint.GetComponent<HingeJoint>().connectedBody = joint1.GetComponent<Rigidbody>();
+
+                joint1.GetComponent<HingeJoint>().connectedAnchor = new Vector3(playerPos.x, playerPos.y, playerPos.z);
+                joint2.GetComponent<HingeJoint>().connectedAnchor = new Vector3(hookLandObjPos.x, hookLandObjPos.y, hookLandObjPos.z);
+                middleJoint.GetComponent<HingeJoint>().connectedAnchor = new Vector3((playerPos.x + hookLandObjPos.x) / 2, (playerPos.y + hookLandObjPos.y) / 2, (playerPos.z + hookLandObjPos.z) / 2);
+
             }
         }
 
