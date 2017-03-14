@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Grapple Snapple.unity
+  isLoaded: 1
+  isActive: 1
