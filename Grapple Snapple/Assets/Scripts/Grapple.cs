@@ -44,7 +44,7 @@ public class Grapple : MonoBehaviour
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150))
             {
 
-                if (hit.collider && hit.collider.name != "InvisWall")
+                if (hit.collider) // && hit.collider.name != "InvisWall")
                 {
                     hitPoint = hit.point;
                     grapple = true;

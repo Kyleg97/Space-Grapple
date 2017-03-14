@@ -35,7 +35,7 @@ public class Line : MonoBehaviour
             line.SetPosition(0, playerPos);
         }
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "InvisWall")
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "InvisWall")
         {
             //Debug.Log("In Range!");
             crossX.GetComponent<Image>().color = new Color(0, 255, 0);
@@ -51,7 +51,7 @@ public class Line : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "InvisWall")
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "InvisWall")
             {
                 lineHit = hit.point;
                 lineObj.AddComponent<LineRenderer>();

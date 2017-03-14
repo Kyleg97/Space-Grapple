@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(CapsuleCollider))]
-
 public class FPSInput : MonoBehaviour
 {
 
@@ -38,7 +35,6 @@ public class FPSInput : MonoBehaviour
             velocityChange.y = 0;
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            // Jump
             if (canJump && Input.GetButton("Jump"))
             {
                 rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f, velocity.z);
