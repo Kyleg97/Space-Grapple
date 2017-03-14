@@ -207,7 +207,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="TinyTerrain">
- <HintPath>C:/Users/kyleg/Documents/Grapple Snapple/Assets/TinyTerrain/Editor/TinyTerrain.dll</HintPath>
+ <HintPath>C:/Users/kyleg/Documents/GitHub/Grapple-Snapple/Grapple Snapple/Assets/TinyTerrain/Editor/TinyTerrain.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
