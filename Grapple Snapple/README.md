@@ -2,7 +2,7 @@
 A 3D Grappling Hook game
 
 Kyle Gilbert - kyle.gilbert1622@gmail.com
-- Grappling hook controls
+- Grappling hook controls / map
 
 Alex Rekow - allosharekow@gmail.com
-- Map building
+- First person 3D rigging/animation
