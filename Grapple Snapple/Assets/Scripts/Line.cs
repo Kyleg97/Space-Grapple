@@ -15,12 +15,15 @@ public class Line : MonoBehaviour
     private LineRenderer line;
     private float distance = 170;
 
+    Collider grappleCollider = Grapple.hit.collider;
+
     void Start()
     {
         player = GameObject.Find("Player");
         lineObj = GameObject.Find("Line");
         crossX = GameObject.Find("CrosshairX");
         crossY = GameObject.Find("CrosshairY");
+        playerPos = player.transform.position;
     }
 
     // Update is called once per frame
@@ -28,14 +31,14 @@ public class Line : MonoBehaviour
     {
 
         RaycastHit hit;
-        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        playerPos = player.transform.position;
 
         if (line != null)
         {
             line.SetPosition(0, playerPos);
         }
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "Roof")
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "Roof")
         {
             //Debug.Log("In Range!");
             crossX.GetComponent<Image>().color = new Color(0, 255, 0);
@@ -51,7 +54,7 @@ public class Line : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "Roof")
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "Roof")
             {
                 lineHit = hit.point;
                 lineObj.AddComponent<LineRenderer>();
@@ -70,5 +73,32 @@ public class Line : MonoBehaviour
         {
             Destroy(line);
         }
+
+        /*
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 300) && hit.collider.name != "Roof")
+            {
+                if (Grapple.canGo)
+                {
+                    lineHit = hit.point;
+                    lineObj.AddComponent<LineRenderer>();
+                    line = lineObj.GetComponent<LineRenderer>();
+                    line.SetPosition(0, playerPos);
+                    line.SetPosition(1, lineHit);
+                    line.useWorldSpace = true;
+                    line.startWidth = 0.08f;
+                    line.endWidth = 0.06f;
+                    line.material = new Material(Shader.Find("Standard"));
+                    line.material.color = Color.black;
+                }
+            }
+        }
+
+        if (Grapple.tooFast)
+        {
+            Destroy(line);
+        }
+        */
     }
 }

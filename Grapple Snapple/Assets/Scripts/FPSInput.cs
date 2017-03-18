@@ -7,10 +7,9 @@ public class FPSInput : MonoBehaviour
 
     public float speed = 10.0f;
     public float gravity = 10.0f;
-    public float maxVelocity = 100.0f;
+    public float maxVelocity = 80.0f;
     public bool canJump = true;
     public float jumpHeight = 2.0f;
-    private bool grounded = false;
     Rigidbody rb;
 
     void Awake()
@@ -22,7 +21,7 @@ public class FPSInput : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (grounded)
+        if (isGrounded() && !Grapple.grapple)
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             targetVelocity = transform.TransformDirection(targetVelocity);
@@ -51,16 +50,20 @@ public class FPSInput : MonoBehaviour
 
         rb.AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
 
-        grounded = false;
     }
 
-    void OnCollisionStay()
+    bool isGrounded()
     {
-        grounded = true;
+        return Physics.Raycast(transform.position, -transform.up, Grapple.distToGround + .2f);
     }
 
     float JumpVerticalSpeed()
     {
         return Mathf.Sqrt((2 * jumpHeight * gravity));
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        rb.AddForce(rb.velocity / 2, ForceMode.VelocityChange);
     }
 }

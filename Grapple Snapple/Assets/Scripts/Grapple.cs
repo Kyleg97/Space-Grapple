@@ -10,23 +10,29 @@ public class Grapple : MonoBehaviour
     public float swingForwardSpeed = 10.0f;
     public float swingStrafeSpeed = 7.0f;
 
-    float distToGround;
+    //public float momentum;
+
+    public static float distToGround;
     Collider col;
 
     public float ropeLength = 0f;
 
-    private bool grapple = false;
+    public static bool grapple = false;
     public static Rigidbody rb;
 
     private float dist;
     public static Vector3 hitPoint;
-    RaycastHit hit;
+    public static RaycastHit hit;
     private Vector3 newVel;
+
+    public static bool tooFast = false;
+    public static bool canGo = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
     void Start()
     {
@@ -36,6 +42,10 @@ public class Grapple : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(rb.velocity.magnitude);
+        if(rb.constraints != RigidbodyConstraints.FreezePosition)
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150))
@@ -56,12 +66,9 @@ public class Grapple : MonoBehaviour
             if (grapple)
             {
                 Vector3 vel = transform.position - hitPoint;
-                //Debug.Log(transform.position);
-                //Debug.Log(hitPoint);
-                //Debug.Log(vel);
                 float distance = vel.magnitude;
                 newVel = vel;
-                //Vector3 vectorUp = (transform.position - hookAnchor.position).normalized;
+
                 if (distance > ropeLength)
                 {
                     newVel.Normalize();
@@ -73,14 +80,10 @@ public class Grapple : MonoBehaviour
                 }
 
                 if (Input.GetKey(KeyCode.E))
-                {
                     ropeLength += .5f;
-                }
 
                 if (Input.GetKey(KeyCode.R))
-                {
                     ropeLength -= .5f;
-                }
             }
         }
 
@@ -104,88 +107,85 @@ public class Grapple : MonoBehaviour
 
         //lol
         if (Input.GetKey(KeyCode.T))
-        {
             rb.AddExplosionForce(50, rb.transform.position, 50);
-        }
-
+        /*
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 300))
             {
-
                 if (hit.collider)
                 {
-                    rb.constraints = RigidbodyConstraints.FreezePositionX;
-                    rb.constraints = RigidbodyConstraints.FreezePositionY;
-                    rb.constraints = RigidbodyConstraints.FreezePositionZ;
+                    rb.constraints = RigidbodyConstraints.FreezePosition;
                     rb.useGravity = false;
-                    rb.isKinematic = true;
-
-                    hitPoint = hit.point;
+                    canGo = true;
                     StartCoroutine(launch());
                 }
             }
         }
-        
+        */
+
         if (rb.velocity.magnitude < maxVelocity)
         {
             rb.AddForce(transform.forward * z * speed);
             rb.AddForce(transform.right * x * speed);
         }
-        
-        if (x < 5)
-        {
-            rb.AddForce(transform.right * x * speed);
-        }
-
-        if (x > 5)
-        {
-            rb.AddForce(-transform.right * x * speed);
-        }
-
 
         if (z > 0 && rb.velocity.y < 0f && grapple)
         {
-            //Debug.Log("z > 0");
             rb.AddForce(-transform.up * z * swingForwardSpeed);
             rb.AddForce(transform.right * x * swingStrafeSpeed);
         }
 
-        else if (!IsGrounded())
+        if (!isGrounded())
         {
             rb.AddForce(transform.forward * z * speed / 2);
             rb.AddForce(transform.right * x * speed / 2);
         }
 
         if (rb.velocity.y < -10)
-        {
-            ropeLength -= .4f;
-        }
+            ropeLength -= .2f;
 
-        if (IsGrounded() && grapple)
+        if (isGrounded() && grapple && rb.velocity.magnitude > 2)
         {
             Debug.Log("Grounded");
             ropeLength -= .2f;
-            rb.AddForce(transform.forward * 25);
-            rb.AddForce(transform.up * 35);
-            //rb.AddExplosionForce(200, rb.transform.position, 200);
+            rb.AddForce(transform.forward * 5);
+            rb.AddForce(transform.up * 3);
         }
+
     }
 
-    bool IsGrounded()
+    public static bool isGrounded()
     {
-        return Physics.Raycast(transform.position, -transform.up, distToGround + 10);
+        return Physics.Raycast(rb.transform.position, -rb.transform.up, distToGround + 10);
 
     }
+    /*
+        public IEnumerator launch()
+        {
+            yield return new WaitForSeconds(0.5f);
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            rb.AddForce(transform.forward * 15000);
+            tooFast = false;
+            yield return new WaitForSeconds(0.2f);
+            rb.useGravity = true;
+        }
 
-    public IEnumerator launch()
-    {
-        yield return new WaitForSeconds(0.5f);
-        rb.constraints = RigidbodyConstraints.None;
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
-        rb.transform.position = Vector3.Lerp(rb.transform.position, hitPoint, 25);
-        yield return new WaitForSeconds(0.2f);
-        rb.isKinematic = false;
-        rb.useGravity = true;
-    }
+        void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log("Collision");
+            Debug.Log(rb.velocity.magnitude);
+
+            if (rb.velocity.magnitude > 100)
+            {
+                tooFast = true;
+                Debug.Log("Too fast");
+                rb.constraints = RigidbodyConstraints.FreezePosition;
+                rb.constraints = RigidbodyConstraints.FreezeRotation;
+            }
+
+            tooFast = false;
+        }
+   */
 }
