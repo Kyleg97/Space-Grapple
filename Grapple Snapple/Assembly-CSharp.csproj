@@ -48,12 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\FPSDisplay.cs" />
      <Compile Include="Assets\Scripts\FPSInput.cs" />
+     <Compile Include="Assets\Scripts\Float.cs" />
      <Compile Include="Assets\Scripts\Grapple.cs" />
      <Compile Include="Assets\Scripts\InvisWallTrigger.cs" />
      <Compile Include="Assets\Scripts\Line.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileCol.cs" />
+     <Compile Include="Assets\Scripts\RockRotate.cs" />
      <Compile Include="Assets\Scripts\TimerUI.cs" />
      <Compile Include="Assets\TinyTerrain\Scripts\Rotate.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

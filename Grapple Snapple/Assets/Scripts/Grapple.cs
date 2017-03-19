@@ -5,14 +5,13 @@ using UnityEngine;
 public class Grapple : MonoBehaviour
 {
 
-    public float speed = 10.0f;
     public float maxVelocity = 10.0f;
     public float swingForwardSpeed = 10.0f;
     public float swingStrafeSpeed = 7.0f;
 
     //public float momentum;
 
-    public static float distToGround;
+    public static float groundDist;
     Collider col;
 
     public float ropeLength = 0f;
@@ -25,33 +24,32 @@ public class Grapple : MonoBehaviour
     public static RaycastHit hit;
     private Vector3 newVel;
 
-    public static bool tooFast = false;
-    public static bool canGo = false;
+    //public static bool tooFast = false;
+    //public static bool canGo = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
     void Start()
     {
-        distToGround = col.bounds.extents.y;
+        groundDist = col.bounds.extents.y;
     }
 
 
     void Update()
     {
-        //Debug.Log(rb.velocity.magnitude);
-        if(rb.constraints != RigidbodyConstraints.FreezePosition)
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
-
+        /*
+        if (hit.collider != null)
+            hitPoint = hit.collider.transform.position;
+        */
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150))
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
 
-                if (hit.collider && hit.collider.name != "Roof")
+                if (hit.collider && hit.collider.name != "No")
                 {
                     hitPoint = hit.point;
                     grapple = true;
@@ -108,26 +106,11 @@ public class Grapple : MonoBehaviour
         //lol
         if (Input.GetKey(KeyCode.T))
             rb.AddExplosionForce(50, rb.transform.position, 50);
-        /*
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 300))
-            {
-                if (hit.collider)
-                {
-                    rb.constraints = RigidbodyConstraints.FreezePosition;
-                    rb.useGravity = false;
-                    canGo = true;
-                    StartCoroutine(launch());
-                }
-            }
-        }
-        */
 
         if (rb.velocity.magnitude < maxVelocity)
         {
-            rb.AddForce(transform.forward * z * speed);
-            rb.AddForce(transform.right * x * speed);
+            rb.AddForce(transform.forward * z * 10);
+            rb.AddForce(transform.right * x * 10);
         }
 
         if (z > 0 && rb.velocity.y < 0f && grapple)
@@ -138,8 +121,8 @@ public class Grapple : MonoBehaviour
 
         if (!isGrounded())
         {
-            rb.AddForce(transform.forward * z * speed / 2);
-            rb.AddForce(transform.right * x * speed / 2);
+            rb.AddForce(transform.forward * z * 5);
+            rb.AddForce(transform.right * x * 5);
         }
 
         if (rb.velocity.y < -10)
@@ -148,44 +131,15 @@ public class Grapple : MonoBehaviour
         if (isGrounded() && grapple && rb.velocity.magnitude > 2)
         {
             Debug.Log("Grounded");
-            ropeLength -= .2f;
-            rb.AddForce(transform.forward * 5);
-            rb.AddForce(transform.up * 3);
+            rb.AddForce(transform.forward * 2);
+            rb.AddForce(transform.up * 2);
         }
-
+        
     }
 
     public static bool isGrounded()
     {
-        return Physics.Raycast(rb.transform.position, -rb.transform.up, distToGround + 10);
+        return Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist + 10);
 
     }
-    /*
-        public IEnumerator launch()
-        {
-            yield return new WaitForSeconds(0.5f);
-            rb.constraints = RigidbodyConstraints.None;
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
-            rb.AddForce(transform.forward * 15000);
-            tooFast = false;
-            yield return new WaitForSeconds(0.2f);
-            rb.useGravity = true;
-        }
-
-        void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log("Collision");
-            Debug.Log(rb.velocity.magnitude);
-
-            if (rb.velocity.magnitude > 100)
-            {
-                tooFast = true;
-                Debug.Log("Too fast");
-                rb.constraints = RigidbodyConstraints.FreezePosition;
-                rb.constraints = RigidbodyConstraints.FreezeRotation;
-            }
-
-            tooFast = false;
-        }
-   */
 }

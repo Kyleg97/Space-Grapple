@@ -13,9 +13,8 @@ public class Line : MonoBehaviour
     private Vector3 playerPos;
     private Vector3 lineHit;
     private LineRenderer line;
+    public static RaycastHit hit;
     private float distance = 170;
-
-    Collider grappleCollider = Grapple.hit.collider;
 
     void Start()
     {
@@ -26,19 +25,22 @@ public class Line : MonoBehaviour
         playerPos = player.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        RaycastHit hit;
         playerPos = player.transform.position;
 
         if (line != null)
-        {
             line.SetPosition(0, playerPos);
-        }
+/*
+        if (line != null)
+            line.SetPosition(1, lineHit);
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "Roof")
+        if (hit.collider != null)
+            lineHit = hit.collider.transform.position;
+*/
+        
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
         {
             //Debug.Log("In Range!");
             crossX.GetComponent<Image>().color = new Color(0, 255, 0);
@@ -54,7 +56,7 @@ public class Line : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150)) // && hit.collider.name != "Roof")
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
                 lineHit = hit.point;
                 lineObj.AddComponent<LineRenderer>();
@@ -62,6 +64,7 @@ public class Line : MonoBehaviour
                 line.SetPosition(0, playerPos);
                 line.SetPosition(1, lineHit);
                 line.useWorldSpace = true;
+                line.receiveShadows = false;
                 line.startWidth = 0.08f;
                 line.endWidth = 0.06f;
                 line.material = new Material(Shader.Find("Standard"));

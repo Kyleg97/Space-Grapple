@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Grapple_Snapple.unity
+- path: Assets/Grapple_Snapple backup.unity
   isLoaded: 1
   isActive: 1

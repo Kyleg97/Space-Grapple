@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
+using UnityEngine;
 
 public class FPSInput : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class FPSInput : MonoBehaviour
     public float maxVelocity = 80.0f;
     public bool canJump = true;
     public float jumpHeight = 2.0f;
+    public bool grounded = false;
     Rigidbody rb;
 
     void Awake()
@@ -21,7 +22,8 @@ public class FPSInput : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isGrounded() && !Grapple.grapple)
+        
+        if (grounded)
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             targetVelocity = transform.TransformDirection(targetVelocity);
@@ -36,34 +38,35 @@ public class FPSInput : MonoBehaviour
 
             if (canJump && Input.GetButton("Jump"))
             {
-                rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f, velocity.z);
+                rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f , velocity.z); //1.5---->1.8
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                speed = 20.0f;
+                speed = 24.0f;
             }
 
             else
-                speed = 10.0f;
+                speed = 12.0f;
         }
 
         rb.AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
 
-    }
-
-    bool isGrounded()
-    {
-        return Physics.Raycast(transform.position, -transform.up, Grapple.distToGround + .2f);
+        grounded = false;
     }
 
     float JumpVerticalSpeed()
     {
         return Mathf.Sqrt((2 * jumpHeight * gravity));
     }
-
+    
     void OnCollisionEnter(Collision collision)
     {
         rb.AddForce(rb.velocity / 2, ForceMode.VelocityChange);
+    }
+    
+    void OnCollisionStay()
+    {
+        grounded = true;
     }
 }
