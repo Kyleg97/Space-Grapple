@@ -23,6 +23,10 @@ public class Grapple : MonoBehaviour
     public static Vector3 hitPoint;
     public static RaycastHit hit;
     private Vector3 newVel;
+    public float distance;
+
+    GameObject hookAnchor;
+    GameObject prefab;
 
     //public static bool tooFast = false;
     //public static bool canGo = false;
@@ -35,15 +39,28 @@ public class Grapple : MonoBehaviour
     void Start()
     {
         groundDist = col.bounds.extents.y;
+        prefab = Resources.Load("HookAnchor") as GameObject;
     }
 
 
     void Update()
     {
+        
         /*
         if (hit.collider != null)
-            hitPoint = hit.collider.transform.position;
+        {
+            hitPointDif = hitColPoint1 - hitColPoint;
+            hitPoint += hitPointDif;
+        }
         */
+
+        if (hit.collider != null && hookAnchor != null)
+        {
+            //Debug.Log("GameObject: " + hookAnchor.transform.position);
+            //Debug.Log("Hit Collider: " + hit.collider.transform.position);
+            hitPoint = hookAnchor.transform.position;
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
@@ -52,6 +69,12 @@ public class Grapple : MonoBehaviour
                 if (hit.collider && hit.collider.name != "No")
                 {
                     hitPoint = hit.point;
+                    hookAnchor = Instantiate(prefab) as GameObject;
+                    hookAnchor.transform.position = hitPoint;
+                    hookAnchor.transform.SetParent(hit.collider.transform);
+                    hitPoint = hookAnchor.transform.position;
+                    //Debug.Log("GameObject: " + hookAnchor.transform.position);
+                    //Debug.Log("Hit Collider: " + hit.collider.transform.position);
                     grapple = true;
                     dist = Vector3.Distance(transform.position, hitPoint);
                     ropeLength = dist;
@@ -64,7 +87,7 @@ public class Grapple : MonoBehaviour
             if (grapple)
             {
                 Vector3 vel = transform.position - hitPoint;
-                float distance = vel.magnitude;
+                distance = vel.magnitude;
                 newVel = vel;
 
                 if (distance > ropeLength)
@@ -88,6 +111,7 @@ public class Grapple : MonoBehaviour
         if (Input.GetButtonUp("Fire1"))
         {
             grapple = false;
+            Destroy(hookAnchor);
 
             if (rb.velocity.y > 0 && rb.velocity.x > 0)
             {
@@ -131,8 +155,8 @@ public class Grapple : MonoBehaviour
         if (isGrounded() && grapple && rb.velocity.magnitude > 2)
         {
             Debug.Log("Grounded");
-            rb.AddForce(transform.forward * 2);
-            rb.AddForce(transform.up * 2);
+            rb.AddForce(transform.forward * 12);
+            rb.AddForce(transform.up * 10);
         }
         
     }
