@@ -30,7 +30,11 @@ public class Line : MonoBehaviour
         playerPos = player.transform.position;
 
         if (line != null)
+        {
             line.SetPosition(0, playerPos);
+            line.SetPosition(1, Grapple.hookAnchor.transform.position);
+        }
+
 /*
         if (line != null)
             line.SetPosition(1, lineHit);

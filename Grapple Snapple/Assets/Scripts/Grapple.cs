@@ -25,8 +25,8 @@ public class Grapple : MonoBehaviour
     private Vector3 newVel;
     public float distance;
 
-    GameObject hookAnchor;
-    GameObject prefab;
+    public static GameObject hookAnchor;
+    public GameObject prefab;
 
     //public static bool tooFast = false;
     //public static bool canGo = false;
@@ -101,10 +101,10 @@ public class Grapple : MonoBehaviour
                 }
 
                 if (Input.GetKey(KeyCode.E))
-                    ropeLength += .5f;
+                    ropeLength += .3f;
 
                 if (Input.GetKey(KeyCode.R))
-                    ropeLength -= .5f;
+                    ropeLength -= .3f;
             }
         }
 
@@ -155,8 +155,8 @@ public class Grapple : MonoBehaviour
         if (isGrounded() && grapple && rb.velocity.magnitude > 2)
         {
             Debug.Log("Grounded");
-            rb.AddForce(transform.forward * 12);
-            rb.AddForce(transform.up * 10);
+            rb.AddForce(transform.forward * 15);
+            rb.AddForce(transform.up * 7.5f);
         }
         
     }

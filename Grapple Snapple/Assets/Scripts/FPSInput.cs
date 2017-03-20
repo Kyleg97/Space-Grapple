@@ -5,7 +5,7 @@ using UnityEngine;
 public class FPSInput : MonoBehaviour
 {
 
-    public float speed = 10.0f;
+    public float speed = 12.0f;
     public float gravity = 10.0f;
     public float maxVelocity = 80.0f;
     public bool canJump = true;
@@ -43,7 +43,7 @@ public class FPSInput : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                speed = 24.0f;
+                speed = 20.0f;
             }
 
             else

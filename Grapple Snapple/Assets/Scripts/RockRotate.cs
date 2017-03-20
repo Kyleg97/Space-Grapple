@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RockRotate : MonoBehaviour {
 
-    GameObject anchor;
+    public float rotateSpeed;
 
 	void Start () {
-        anchor = GameObject.Find("RotateAnchor");
+        //anchor = GameObject.Find("RotateAnchor");
 	}
 	
 	void Update () {
-        transform.RotateAround(anchor.transform.position, Vector3.up, 20 * Time.deltaTime);
+        transform.RotateAround(transform.parent.position, Vector3.up, rotateSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up * (20 * Time.deltaTime));
     }
 }
