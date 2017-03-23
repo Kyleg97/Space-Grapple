@@ -12,7 +12,7 @@ public class Line : MonoBehaviour
     private GameObject crossY;
     private Vector3 playerPos;
     private Vector3 lineHit;
-    private LineRenderer line;
+    public static LineRenderer line;
     public static RaycastHit hit;
     private float distance = 170;
 

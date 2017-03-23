@@ -101,10 +101,10 @@ public class Grapple : MonoBehaviour
                 }
 
                 if (Input.GetKey(KeyCode.E))
-                    ropeLength += .3f;
+                    ropeLength += .5f * (50 * Time.deltaTime);
 
                 if (Input.GetKey(KeyCode.R))
-                    ropeLength -= .3f;
+                    ropeLength -= .5f * (50 * Time.deltaTime);
             }
         }
 
@@ -117,6 +117,7 @@ public class Grapple : MonoBehaviour
             {
                 rb.AddForce(transform.forward * 50);
                 rb.AddForce(transform.right * 50);
+                rb.AddForce(transform.up * 50);
             }
         }
     }
@@ -137,10 +138,10 @@ public class Grapple : MonoBehaviour
             rb.AddForce(transform.right * x * 10);
         }
 
-        if (z > 0 && rb.velocity.y < 0f && grapple)
+        if (Mathf.Abs(z) > 0 && Mathf.Abs(x) > 0 && rb.velocity.y < 0 && grapple)
         {
-            rb.AddForce(-transform.up * z * swingForwardSpeed);
-            rb.AddForce(transform.right * x * swingStrafeSpeed);
+            rb.AddForce(-transform.up * z * swingForwardSpeed * 2);
+            rb.AddForce(transform.right * x * swingStrafeSpeed * 2);
         }
 
         if (!isGrounded())
@@ -148,17 +149,24 @@ public class Grapple : MonoBehaviour
             rb.AddForce(transform.forward * z * 5);
             rb.AddForce(transform.right * x * 5);
         }
-
+        
         if (rb.velocity.y < -10)
-            ropeLength -= .2f;
+            ropeLength -= .2f * (40 * Time.deltaTime);
 
-        if (isGrounded() && grapple && rb.velocity.magnitude > 2)
+        if (isGrounded() && grapple && rb.velocity.magnitude > 30)
         {
             Debug.Log("Grounded");
-            rb.AddForce(transform.forward * 15);
-            rb.AddForce(transform.up * 7.5f);
+            Debug.Log(rb.velocity.magnitude);
+            ropeLength -= .3f * (40 * Time.deltaTime);
+            rb.AddForce(transform.forward * 20);
+            rb.AddForce(transform.up * 15);
         }
-        
+
+
+        if (Input.GetKey(KeyCode.R) && grapple && Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist))
+        {
+            rb.AddForce(transform.up * 15);
+        }
     }
 
     public static bool isGrounded()
