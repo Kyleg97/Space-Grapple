@@ -7,6 +7,8 @@ public class MouseLook : MonoBehaviour
     Vector2 _mouseAbsolute;
     Vector2 _smoothMouse;
 
+    private GameObject cam;
+
     private Vector2 clampInDegrees = new Vector2(360, 180);
     private Vector2 sensitivity = new Vector2(2, 2);
     public  Vector2 smoothing = new Vector2(3, 3);

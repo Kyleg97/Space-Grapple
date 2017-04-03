@@ -5,13 +5,13 @@ using UnityEngine;
 public class FPSInput : MonoBehaviour
 {
 
-    public float speed = 12.0f;
+    public float speed;
     public float gravity = 10.0f;
     public float maxVelocity = 80.0f;
-    public bool canJump = true;
     public float jumpHeight = 2.0f;
-    public bool grounded = false;
+    //public static bool grounded = false;
     Rigidbody rb;
+    public static bool running;
 
     void Awake()
     {
@@ -21,9 +21,8 @@ public class FPSInput : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        
-        if (grounded)
+    {        
+        if (Grapple2.isGrounded())
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             targetVelocity = transform.TransformDirection(targetVelocity);
@@ -34,25 +33,34 @@ public class FPSInput : MonoBehaviour
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocity, maxVelocity);
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocity, maxVelocity);
             velocityChange.y = 0;
+            if (velocityChange != new Vector3 (0,0,0))
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            if (canJump && Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
                 rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f , velocity.z); //1.5---->1.8
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                running = true;
                 speed = 20.0f;
+                Headbob.bobbingAmount = .1f;
+                Headbob.bobbingSpeed = .2f;
             }
 
             else
+            {
+                running = false;
                 speed = 12.0f;
+                Headbob.bobbingAmount = .1f;
+                Headbob.bobbingSpeed = .15f;
+            }
         }
 
         rb.AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
 
-        grounded = false;
+        //grounded = false;
     }
 
     float JumpVerticalSpeed()
@@ -63,10 +71,29 @@ public class FPSInput : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         rb.AddForce(rb.velocity / 2, ForceMode.VelocityChange);
+
+        if (collision.gameObject.name == "Ramp")
+        {
+            Debug.Log("Ramp!");
+            gravity = 80.0f;
+            Debug.Log(gravity);
+            StartCoroutine(gravityChange());
+            Debug.Log(gravity);
+        }
     }
-    
-    void OnCollisionStay()
+
+    public IEnumerator gravityChange()
     {
-        grounded = true;
+        yield return new WaitForSeconds(0.5f);
+        gravity = 10.0f;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "Lava")
+        {
+            Debug.Log("Die");
+            Time.timeScale = 0;
+        }
     }
 }

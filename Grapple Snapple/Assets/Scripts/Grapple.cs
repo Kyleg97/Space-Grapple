@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,36 +29,29 @@ public class Grapple : MonoBehaviour
     public static GameObject hookAnchor;
     public GameObject prefab;
 
-    //public static bool tooFast = false;
-    //public static bool canGo = false;
+    public AudioSource grappleShoot;
+    public AudioSource grappleHit;
+    public AudioClip footStep;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<Collider>();
+        col = GetComponent<Collider>(); 
     }
     void Start()
     {
         groundDist = col.bounds.extents.y;
         prefab = Resources.Load("HookAnchor") as GameObject;
+        grappleShoot = GetComponent<AudioSource>();
+        grappleHit = prefab.GetComponent<AudioSource>();
+        footStep = Resources.Load("FootStepWalk") as AudioClip;
     }
 
 
     void Update()
     {
-        
-        /*
-        if (hit.collider != null)
-        {
-            hitPointDif = hitColPoint1 - hitColPoint;
-            hitPoint += hitPointDif;
-        }
-        */
-
         if (hit.collider != null && hookAnchor != null)
         {
-            //Debug.Log("GameObject: " + hookAnchor.transform.position);
-            //Debug.Log("Hit Collider: " + hit.collider.transform.position);
             hitPoint = hookAnchor.transform.position;
         }
 
@@ -68,15 +62,17 @@ public class Grapple : MonoBehaviour
 
                 if (hit.collider && hit.collider.name != "No")
                 {
+                    grappleShoot.Play();
                     hitPoint = hit.point;
                     hookAnchor = Instantiate(prefab) as GameObject;
                     hookAnchor.transform.position = hitPoint;
                     hookAnchor.transform.SetParent(hit.collider.transform);
-                    hitPoint = hookAnchor.transform.position;
+                    grappleHit.Play();
+                    //hitPoint = hookAnchor.transform.position;
                     //Debug.Log("GameObject: " + hookAnchor.transform.position);
                     //Debug.Log("Hit Collider: " + hit.collider.transform.position);
                     grapple = true;
-                    dist = Vector3.Distance(transform.position, hitPoint);
+                    dist = Vector3.Distance(transform.position, hookAnchor.transform.position);
                     ropeLength = dist;
                 }
             }
@@ -95,16 +91,16 @@ public class Grapple : MonoBehaviour
                     newVel.Normalize();
                     vel = Vector3.ClampMagnitude(vel, ropeLength);
                     transform.position = hitPoint + vel;
-                    float x = Vector3.Dot(newVel, rb.velocity);
-                    newVel *= x;
+                    float dot = Vector3.Dot(newVel, rb.velocity);
+                    newVel *= dot;
                     rb.velocity -= newVel;
                 }
 
                 if (Input.GetKey(KeyCode.E))
-                    ropeLength += .5f * (50 * Time.deltaTime);
+                    ropeLength += .5f * (70 * Time.deltaTime);
 
                 if (Input.GetKey(KeyCode.R))
-                    ropeLength -= .5f * (50 * Time.deltaTime);
+                    ropeLength -= .5f * (100 * Time.deltaTime);
             }
         }
 
@@ -128,7 +124,6 @@ public class Grapple : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        //lol
         if (Input.GetKey(KeyCode.T))
             rb.AddExplosionForce(50, rb.transform.position, 50);
 
@@ -142,6 +137,11 @@ public class Grapple : MonoBehaviour
         {
             rb.AddForce(-transform.up * z * swingForwardSpeed * 2);
             rb.AddForce(transform.right * x * swingStrafeSpeed * 2);
+        }
+
+        if (rb.velocity.y < 0 && grapple)
+        {
+            ropeLength -= .2f * (5 * Time.deltaTime);
         }
 
         if (!isGrounded())
@@ -158,20 +158,22 @@ public class Grapple : MonoBehaviour
             Debug.Log("Grounded");
             Debug.Log(rb.velocity.magnitude);
             ropeLength -= .3f * (40 * Time.deltaTime);
-            rb.AddForce(transform.forward * 20);
-            rb.AddForce(transform.up * 15);
         }
 
-
-        if (Input.GetKey(KeyCode.R) && grapple && Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist))
+        if (Input.GetKey(KeyCode.R) && grapple && Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist + 5))
         {
-            rb.AddForce(transform.up * 15);
+            Debug.Log("Reeling and Grounded");
+            rb.AddForce(transform.up * 5 * Time.deltaTime);
         }
     }
 
     public static bool isGrounded()
     {
-        return Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist + 10);
+        return Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist + 3);
+    }
 
+    public static bool isGrounded2()
+    {
+        return Physics.Raycast(rb.transform.position, -rb.transform.up, groundDist + 0.1f);
     }
 }

@@ -5,11 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    GameObject prefab;
-    GameObject projectile;
+    public GameObject prefab;
+    public GameObject projectile;
     Rigidbody rb;
     bool offCd = false;
-    bool hit = false;
     IEnumerator projectileFun;
 
 
@@ -28,7 +27,7 @@ public class Projectile : MonoBehaviour
             projectile.GetComponent<Rigidbody>().isKinematic = false;
             projectile.transform.position = playerPos + Camera.main.transform.forward * 2;
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            rb.velocity = Camera.main.transform.forward * 50;
+            rb.velocity = Camera.main.transform.forward * 100;
             //small gap to let the player right click again
             StartCoroutine(offCdFun());
             //assigned to later pass as param to StopCoroutine
@@ -45,8 +44,9 @@ public class Projectile : MonoBehaviour
             {
                 //Debug.Log("destroy!");
                 transform.position = projectile.transform.position;
-                Grapple.rb.velocity = new Vector3(0, 0, 0);
+                Grapple2.rb.velocity = new Vector3(0, 0, 0);
                 Destroy(projectile);
+                Destroy(ProjectileCol.projectileParent);
                 //stops 4.5s timer
                 StopCoroutine(projectileFun);
             }
@@ -64,5 +64,6 @@ public class Projectile : MonoBehaviour
     {
         yield return new WaitForSeconds(4.5f);
         Destroy(projectile);
+        Destroy(ProjectileCol.projectileParent);
     }
 }

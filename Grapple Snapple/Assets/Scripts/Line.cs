@@ -14,7 +14,6 @@ public class Line : MonoBehaviour
     private Vector3 lineHit;
     public static LineRenderer line;
     public static RaycastHit hit;
-    private float distance = 170;
 
     void Start()
     {
@@ -69,9 +68,9 @@ public class Line : MonoBehaviour
                 line.SetPosition(1, lineHit);
                 line.useWorldSpace = true;
                 line.receiveShadows = false;
-                line.startWidth = 0.08f;
-                line.endWidth = 0.06f;
-                line.material = new Material(Shader.Find("Standard"));
+                line.startWidth = 0.1f;
+                line.endWidth = 0.1f;
+                line.material = new Material(Shader.Find("Unlit/Color"));
                 line.material.color = Color.black;
             }
         }
