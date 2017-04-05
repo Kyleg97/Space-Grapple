@@ -8,7 +8,7 @@ public class Grapple2 : MonoBehaviour
 
     public float maxVelocity = 10.0f;
     public float swingForwardSpeed = 10.0f;
-    public float swingStrafeSpeed = 7.0f;
+    public float swingStrafeSpeed = 10.0f;
 
     //public float momentum;
 
@@ -101,7 +101,7 @@ public class Grapple2 : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            if (grapple)
+            if (grapple && hook != null)
             {
                 Vector3 vel = transform.position - hook.transform.position;
                 distance = vel.magnitude;
@@ -210,18 +210,6 @@ public class Grapple2 : MonoBehaviour
             rb.AddForce(transform.right * x * 10);
         }
 
-        if (Mathf.Abs(z) > 0 && Mathf.Abs(x) > 0 && rb.velocity.y < 0 && grapple)
-        {
-            rb.AddForce(-transform.up * z * swingForwardSpeed * 2);
-            rb.AddForce(transform.right * x * swingStrafeSpeed * 2);
-        }
-        /*
-        if (rb.velocity.y < 0 && grapple)
-        {
-            ropeLength -= .2f * (5 * Time.deltaTime);
-        }
-        */
-
         if (rb.velocity.y < -10)
             ropeLength -= .2f * (40 * Time.deltaTime);
 
@@ -231,7 +219,13 @@ public class Grapple2 : MonoBehaviour
             //Debug.Log(rb.velocity.magnitude); 
             ropeLength -= .3f * (40 * Time.deltaTime);
         }
-        
+
+        if (!isGrounded())
+        {
+            rb.AddForce(transform.forward * z * 5);
+            rb.AddForce(transform.right * x * 5);
+        }
+
     }
 
     public static bool isGrounded()

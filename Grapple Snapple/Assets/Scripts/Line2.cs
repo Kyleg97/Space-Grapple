@@ -28,7 +28,7 @@ public class Line2 : MonoBehaviour
     {
         playerPos = player.transform.position;
 
-        if (line != null)
+        if (line != null && Grapple2.hook != null)
         {
             line.SetPosition(0, playerPos);
             line.SetPosition(1, Grapple2.hook.transform.position);
@@ -61,7 +61,7 @@ public class Line2 : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
-                if (!lineObj.GetComponent<LineRenderer>())
+                if (!lineObj.GetComponent<LineRenderer>() && Grapple2.hook != null)
                 {
                     lineHit = hit.point;
                     lineObj.AddComponent<LineRenderer>();

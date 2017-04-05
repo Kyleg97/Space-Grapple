@@ -6,18 +6,20 @@ public class FPSInput : MonoBehaviour
 {
 
     public float speed;
-    public float gravity = 10.0f;
+    public float gravity = 11.0f;
     public float maxVelocity = 80.0f;
-    public float jumpHeight = 2.0f;
+    public float jumpHeight = 3.5f;
     //public static bool grounded = false;
     Rigidbody rb;
     public static bool running;
+    public static bool canDisable;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         rb.useGravity = true;
+        canDisable = false;
     }
 
     void FixedUpdate()
@@ -74,7 +76,7 @@ public class FPSInput : MonoBehaviour
 
         if (collision.gameObject.name == "Ramp")
         {
-            Debug.Log("Ramp!");
+            Debug.Log("Ramp");
             gravity = 80.0f;
             Debug.Log(gravity);
             StartCoroutine(gravityChange());
@@ -93,6 +95,7 @@ public class FPSInput : MonoBehaviour
         if(other.name == "Lava")
         {
             Debug.Log("Die");
+            canDisable = true;
             Time.timeScale = 0;
         }
     }

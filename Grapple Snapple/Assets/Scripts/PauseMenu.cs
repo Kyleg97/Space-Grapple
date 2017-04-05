@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour {
     public Grapple2 grappleScript;
     public Projectile projectileScript;
     public Line2 lineScript;
-    public Headbob headbobScript;
+    //public Headbob headbobScript;
     public BlurOptimized mainCam;
 
 	void Start () {
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour {
         grappleScript = GameObject.Find("Player").GetComponent<Grapple2>();
         projectileScript = GameObject.Find("Player").GetComponent<Projectile>();
         lineScript = GameObject.Find("Line").GetComponent<Line2>();
-        headbobScript = GameObject.Find("Main Camera").GetComponent<Headbob>();
+        //headbobScript = GameObject.Find("Main Camera").GetComponent<Headbob>();
         mainCam.enabled = false;
         mouseLookScript.enabled = true;
 	}
@@ -36,6 +36,9 @@ public class PauseMenu : MonoBehaviour {
         {
             if (pauseMenu.enabled == false)
             {
+                Destroy(Line2.line);
+                Destroy(Grapple2.hook);
+                Destroy(Grapple2.hookAnchor);
                 pauseMenu.enabled = true;
                 mainCam.enabled = true;
                 restartMenu.enabled = false;
@@ -43,9 +46,7 @@ public class PauseMenu : MonoBehaviour {
                 grappleScript.enabled = false;
                 lineScript.enabled = false;
                 projectileScript.enabled = false;
-                headbobScript.enabled = false;
-                //idk about this...
-                Destroy(Line.line);
+                //headbobScript.enabled = false;
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
@@ -59,9 +60,25 @@ public class PauseMenu : MonoBehaviour {
                 grappleScript.enabled = true;
                 lineScript.enabled = true;
                 projectileScript.enabled = true;
-                headbobScript.enabled = true;
+                Grapple2.hookDestroyed = true;
+                //headbobScript.enabled = true;
                 Time.timeScale = 1;
             }
+        }
+
+        if (FPSInput.canDisable)
+        {
+            pauseMenu.enabled = false;
+            mainCam.enabled = false;
+            restartMenu.enabled = false;
+            mouseLookScript.enabled = false;
+            grappleScript.enabled = false;
+            lineScript.enabled = false;
+            projectileScript.enabled = false;
+            //headbobScript.enabled = false;
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 	}
 
@@ -79,7 +96,8 @@ public class PauseMenu : MonoBehaviour {
         projectileScript.enabled = true;
         lineScript.enabled = true;
         grappleScript.enabled = true;
-        headbobScript.enabled = true;
+        Grapple2.hookDestroyed = true;
+        //headbobScript.enabled = true;
     }
 
     public void RestartPressYes()
@@ -91,7 +109,7 @@ public class PauseMenu : MonoBehaviour {
         grappleScript.enabled = true;
         lineScript.enabled = true;
         projectileScript.enabled = true;
-        headbobScript.enabled = true;
+        //headbobScript.enabled = true;
         Time.timeScale = 1;
     }
 

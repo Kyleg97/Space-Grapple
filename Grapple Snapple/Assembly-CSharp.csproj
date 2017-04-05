@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Headbob.cs" />
      <Compile Include="Assets\Scripts\HookCollide.cs" />
      <Compile Include="Assets\Scripts\InvisWallTrigger.cs" />
+     <Compile Include="Assets\Scripts\LaunchPad.cs" />
      <Compile Include="Assets\Scripts\Line.cs" />
      <Compile Include="Assets\Scripts\Line2.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
