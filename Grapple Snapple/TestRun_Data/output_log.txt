@@ -1,437 +1,188 @@
 Initialize engine version: 5.5.2f1 (3829d7f588f3)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940MX (ID=0x179c)
     Vendor:   NVIDIA
-    VRAM:     3072 MB
-    Driver:   21.21.13.7653
+    VRAM:     2019 MB
+    Driver:   21.20.16.4534
 Begin MonoManager ReloadAssembly
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.025 seconds
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: G:\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.195 seconds
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.920394 ms
+UnloadTime: 2.408592 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: c3c -> priority: 1 
+  Thread -> id: 1628 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.455758 ms
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 1228.
-Total: 0.671452 ms (FindLiveObjects: 0.048046 ms CreateObjectMapping: 0.024323 ms MarkObjects: 0.177472 ms  DeleteObjects: 0.421309 ms)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-46.42424
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-46.79898
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-47.17549
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-47.55371
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-47.93364
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-48.31524
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-48.69844
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-49.08323
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-49.46955
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-49.85737
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-50.24662
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-50.63728
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-51.02927
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-51.42254
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-51.81705
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-52.21271
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-52.60946
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-53.00725
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-53.40598
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-53.80561
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-54.20609
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-54.60735
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-55.00926
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-55.41169
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-55.81457
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-56.21778
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-56.62122
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-57.0248
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-57.42839
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-57.83189
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-58.23517
+The tree AG01_1 couldn't be instanced because the prefab contains no valid mesh renderer.
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-58.63811
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-59.04057
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-59.44239
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-59.84354
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-60.24376
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 160)
 
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-60.64299
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-61.04108
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+UnloadTime: 4.458482 ms
 
-Grounded
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3194.
+Total: 1.638326 ms (FindLiveObjects: 0.135929 ms CreateObjectMapping: 0.056259 ms MarkObjects: 0.503693 ms  DeleteObjects: 0.942443 ms)
 
-61.43786
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-61.8332
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-62.22697
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-62.619
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+Collision with launch
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-63.00909
+Starting launch...
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Grounded
+Launch!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-63.39706
+Forward!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-63.78274
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-64.16593
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-64.54648
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-64.92416
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-65.29881
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-Grounded
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at Line2.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: -1)
 
-65.67023
+Die
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

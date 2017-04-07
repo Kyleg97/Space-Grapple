@@ -6,7 +6,7 @@ public class FPSInput : MonoBehaviour
 {
 
     public float speed;
-    public float gravity = 11.0f;
+    public static float gravity = 11.0f;
     public float maxVelocity = 80.0f;
     public float jumpHeight = 3.5f;
     //public static bool grounded = false;
@@ -38,7 +38,7 @@ public class FPSInput : MonoBehaviour
             if (velocityChange != new Vector3 (0,0,0))
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButton("Jump"))
             {
                 rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f , velocity.z); //1.5---->1.8
             }

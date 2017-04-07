@@ -14,6 +14,7 @@ public class Line : MonoBehaviour
     private Vector3 lineHit;
     public static LineRenderer line;
     public static RaycastHit hit;
+    public Material lineMat;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Line : MonoBehaviour
         lineObj = GameObject.Find("Line");
         crossX = GameObject.Find("CrosshairX");
         crossY = GameObject.Find("CrosshairY");
+        lineMat = Resources.Load("Line", typeof(Material)) as Material;
         playerPos = player.transform.position;
     }
 
@@ -70,8 +72,7 @@ public class Line : MonoBehaviour
                 line.receiveShadows = false;
                 line.startWidth = 0.1f;
                 line.endWidth = 0.1f;
-                line.material = new Material(Shader.Find("Unlit/Color"));
-                line.material.color = Color.black;
+                line.material = lineMat;
             }
         }
 

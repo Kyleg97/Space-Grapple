@@ -86,7 +86,7 @@ public class PauseMenu : MonoBehaviour {
     {
         restartMenu.enabled = true;
     }
-
+    /*
     public void ResumePress()
     {
         pauseMenu.enabled = false;
@@ -98,6 +98,21 @@ public class PauseMenu : MonoBehaviour {
         grappleScript.enabled = true;
         Grapple2.hookDestroyed = true;
         //headbobScript.enabled = true;
+    }
+    */
+
+    public void ResumePress()
+    {
+        pauseMenu.enabled = false;
+        mainCam.enabled = false;
+        restartMenu.enabled = false;
+        mouseLookScript.enabled = true;
+        grappleScript.enabled = true;
+        lineScript.enabled = true;
+        projectileScript.enabled = true;
+        Grapple2.hookDestroyed = true;
+        //headbobScript.enabled = true;
+        Time.timeScale = 1;
     }
 
     public void RestartPressYes()

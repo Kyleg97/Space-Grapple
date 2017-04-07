@@ -36,11 +36,17 @@ public class Grapple2 : MonoBehaviour
     //public AudioSource grappleHit;
     public AudioClip footStep;
 
+    public Vector3 hookDir;
+
     public bool kinematicCheck;
     public static bool hookDestroyed;
     public bool mouseUp;
     public float hookDistance;
     public bool hitTarget;
+
+    public Vector3 point1;
+    public Vector3 point2;
+    public Vector3 point3;
 
     void Awake()
     {
@@ -58,20 +64,43 @@ public class Grapple2 : MonoBehaviour
         hookDestroyed = true;
         mouseUp = false;
         hitTarget = false;
+
+        point1 = GameObject.Find("point1").transform.position;
+        point2 = GameObject.Find("point2").transform.position;
+        point3 = GameObject.Find("point3").transform.position;
     }
 
 
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.I))
+        {
+            transform.position = point1;
+        }
+        if (Input.GetKey(KeyCode.O))
+        {
+            transform.position = point2;
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            transform.position = point3;
+        }
+
+
         if (hook != null)
         {
             hookDistance = Vector3.Distance(transform.position, hook.transform.position);
+            hookDir = hook.transform.position - transform.position;
+            hookDir = hookDir.normalized;
         }
 
         if (Input.GetButtonDown("Fire1") && hookDestroyed)
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
+                //animate throw
+                //PlayerAnimation.anim.Play("Throw", -1, 0f);
                 hook = Instantiate(prefab2) as GameObject;
                 hook.GetComponent<Rigidbody>().isKinematic = false;
                 hook.GetComponent<Rigidbody>().useGravity = false;
@@ -121,9 +150,10 @@ public class Grapple2 : MonoBehaviour
 
                     if (Input.GetKey(KeyCode.E))
                         ropeLength += .4f * (70 * Time.deltaTime);
-
+                    
                     if (Input.GetKey(KeyCode.R))
                         ropeLength -= .4f * (70 * Time.deltaTime);
+                    
                 }
             }
         }
@@ -200,6 +230,16 @@ public class Grapple2 : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        /*
+        if (Input.GetKey(KeyCode.R) && isGrounded() && rb.velocity.magnitude > 3)
+        {
+            ropeLength -= .2f * (50 * Time.deltaTime);
+            rb.AddForce(hookDir * 50);
+            rb.AddForce(-transform.up * 50);
+            rb.AddForce(transform.right * x * 10);
+        }
+        */
 
         if (Input.GetKey(KeyCode.T))
             rb.AddExplosionForce(50, rb.transform.position, 50);
