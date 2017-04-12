@@ -81,13 +81,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Animation\PlayerAnimation.cs" />
+    <Compile Include="Assets\Scripts\Climb.cs" />
     <Compile Include="Assets\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\FPSInput.cs" />
     <Compile Include="Assets\Scripts\Float.cs" />
     <Compile Include="Assets\Scripts\FloatRotate.cs" />
     <Compile Include="Assets\Scripts\Grapple.cs" />
+    <Compile Include="Assets\Scripts\Grapple2.cs" />
+    <Compile Include="Assets\Scripts\Headbob.cs" />
+    <Compile Include="Assets\Scripts\HookCollide.cs" />
     <Compile Include="Assets\Scripts\InvisWallTrigger.cs" />
+    <Compile Include="Assets\Scripts\LaunchPad.cs" />
     <Compile Include="Assets\Scripts\Line.cs" />
+    <Compile Include="Assets\Scripts\Line2.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />

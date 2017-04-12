@@ -9,25 +9,26 @@ public class PauseMenu : MonoBehaviour {
     public Canvas pauseMenu;
     public Canvas restartMenu;
     public Canvas quitMenu;
+    public Canvas controlMenu;
     public MouseLook mouseLookScript;
     public Grapple2 grappleScript;
     public Projectile projectileScript;
     public Line2 lineScript;
     //public Headbob headbobScript;
-    public BlurOptimized mainCam;
+    public BlurOptimized blurScript;
 
 	void Start () {
-        pauseMenu = GetComponent<Canvas>();
         restartMenu.enabled = false;
         quitMenu.enabled = false;
         pauseMenu.enabled = false;
-        mainCam = GameObject.Find("Main Camera").GetComponent<BlurOptimized>();
+        controlMenu.enabled = false;
+        blurScript = GameObject.Find("Main Camera").GetComponent<BlurOptimized>();
         mouseLookScript = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         grappleScript = GameObject.Find("Player").GetComponent<Grapple2>();
         projectileScript = GameObject.Find("Player").GetComponent<Projectile>();
         lineScript = GameObject.Find("Line").GetComponent<Line2>();
         //headbobScript = GameObject.Find("Main Camera").GetComponent<Headbob>();
-        mainCam.enabled = false;
+        blurScript.enabled = false;
         mouseLookScript.enabled = true;
 	}
 	
@@ -40,7 +41,8 @@ public class PauseMenu : MonoBehaviour {
                 Destroy(Grapple2.hook);
                 Destroy(Grapple2.hookAnchor);
                 pauseMenu.enabled = true;
-                mainCam.enabled = true;
+                blurScript.enabled = true;
+                controlMenu.enabled = false;
                 restartMenu.enabled = false;
                 mouseLookScript.enabled = false;
                 grappleScript.enabled = false;
@@ -54,8 +56,9 @@ public class PauseMenu : MonoBehaviour {
             else
             {
                 pauseMenu.enabled = false;
-                mainCam.enabled = false;
+                blurScript.enabled = false;
                 restartMenu.enabled = false;
+                controlMenu.enabled = false;
                 mouseLookScript.enabled = true;
                 grappleScript.enabled = true;
                 lineScript.enabled = true;
@@ -69,8 +72,9 @@ public class PauseMenu : MonoBehaviour {
         if (FPSInput.canDisable)
         {
             pauseMenu.enabled = false;
-            mainCam.enabled = false;
+            blurScript.enabled = false;
             restartMenu.enabled = false;
+            controlMenu.enabled = false;
             mouseLookScript.enabled = false;
             grappleScript.enabled = false;
             lineScript.enabled = false;
@@ -86,26 +90,13 @@ public class PauseMenu : MonoBehaviour {
     {
         restartMenu.enabled = true;
     }
-    /*
-    public void ResumePress()
-    {
-        pauseMenu.enabled = false;
-        mainCam.enabled = false;
-        mouseLookScript.enabled = true;
-        Time.timeScale = 1;
-        projectileScript.enabled = true;
-        lineScript.enabled = true;
-        grappleScript.enabled = true;
-        Grapple2.hookDestroyed = true;
-        //headbobScript.enabled = true;
-    }
-    */
 
     public void ResumePress()
     {
         pauseMenu.enabled = false;
-        mainCam.enabled = false;
+        blurScript.enabled = false;
         restartMenu.enabled = false;
+        controlMenu.enabled = false;
         mouseLookScript.enabled = true;
         grappleScript.enabled = true;
         lineScript.enabled = true;
@@ -113,13 +104,29 @@ public class PauseMenu : MonoBehaviour {
         Grapple2.hookDestroyed = true;
         //headbobScript.enabled = true;
         Time.timeScale = 1;
+    }
+
+    public void ControlPress()
+    {
+        pauseMenu.enabled = true;
+        blurScript.enabled = true;
+        controlMenu.enabled = true;
+        quitMenu.enabled = false;
+        restartMenu.enabled = false;
+        mouseLookScript.enabled = false;
+        grappleScript.enabled = false;
+        lineScript.enabled = false;
+        projectileScript.enabled = false;
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void RestartPressYes()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         pauseMenu.enabled = false;
-        mainCam.enabled = false;
+        blurScript.enabled = false;
         mouseLookScript.enabled = true;
         grappleScript.enabled = true;
         lineScript.enabled = true;
@@ -131,7 +138,7 @@ public class PauseMenu : MonoBehaviour {
     public void RestartPressNo()
     {
         pauseMenu.enabled = true;
-        mainCam.enabled = true;
+        blurScript.enabled = true;
         quitMenu.enabled = false;
         restartMenu.enabled = false;
         mouseLookScript.enabled = false;
@@ -145,17 +152,20 @@ public class PauseMenu : MonoBehaviour {
 
     public void QuitGamePress()
     {
-        pauseMenu.enabled = true;
-        mainCam.enabled = true;
-        quitMenu.enabled = true;
-        restartMenu.enabled = false;
-        mouseLookScript.enabled = false;
-        grappleScript.enabled = false;
-        lineScript.enabled = false;
-        projectileScript.enabled = false;
-        Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (!restartMenu.enabled)
+        {
+            pauseMenu.enabled = true;
+            blurScript.enabled = true;
+            quitMenu.enabled = true;
+            restartMenu.enabled = false;
+            mouseLookScript.enabled = false;
+            grappleScript.enabled = false;
+            lineScript.enabled = false;
+            projectileScript.enabled = false;
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void QuitGamePressYes()
@@ -166,7 +176,7 @@ public class PauseMenu : MonoBehaviour {
     public void QuitGamePressNo()
     {
         pauseMenu.enabled = true;
-        mainCam.enabled = true;
+        blurScript.enabled = true;
         quitMenu.enabled = false;
         restartMenu.enabled = false;
         mouseLookScript.enabled = false;

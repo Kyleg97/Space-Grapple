@@ -36,6 +36,7 @@ public class LaunchPad : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             Debug.Log("Collision with launch");
+            boop.Play();
             player.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
             Grapple2.rb.constraints = RigidbodyConstraints.FreezeAll;
 
@@ -59,7 +60,6 @@ public class LaunchPad : MonoBehaviour {
         Grapple2.rb.constraints = RigidbodyConstraints.None;
         Grapple2.rb.constraints = RigidbodyConstraints.FreezeRotation;
         Grapple2.rb.AddRelativeForce(-transform.up * 3200);
-        boop.Play();
         Debug.Log("Launch!");
         StartCoroutine(launchForward());
     }
@@ -69,6 +69,7 @@ public class LaunchPad : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         Grapple2.rb.AddForce(dir * 800);
         grappleScript.enabled = true;
+        Grapple2.hookDestroyed = true;
         lineScript.enabled = true;
         fpsScript.enabled = true;
         Debug.Log("Forward!");
