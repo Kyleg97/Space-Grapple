@@ -26,7 +26,7 @@ public class Grapple2 : MonoBehaviour
     private Vector3 newVel;
     public float distance;
 
-    public static GameObject hookAnchor;
+    //public static GameObject hookAnchor;
     public GameObject prefab;
 
     public static GameObject hook;
@@ -56,8 +56,8 @@ public class Grapple2 : MonoBehaviour
     void Start()
     {
         groundDist = col.bounds.extents.y;
-        prefab = Resources.Load("HookAnchor") as GameObject;
-        prefab2 = Resources.Load("Hook") as GameObject;
+        //prefab = Resources.Load("HookAnchor") as GameObject;
+        prefab2 = Resources.Load("Grapplehook") as GameObject;
         grappleShoot = GetComponent<AudioSource>();
         footStep = Resources.Load("FootStepWalk") as AudioClip;
         kinematicCheck = false;
@@ -65,9 +65,12 @@ public class Grapple2 : MonoBehaviour
         mouseUp = false;
         hitTarget = false;
 
-        point1 = GameObject.Find("point1").transform.position;
-        point2 = GameObject.Find("point2").transform.position;
-        point3 = GameObject.Find("point3").transform.position;
+        if (GameObject.Find("point1") != null)
+        {
+            point1 = GameObject.Find("point1").transform.position;
+            point2 = GameObject.Find("point2").transform.position;
+            point3 = GameObject.Find("point3").transform.position;
+        }
     }
 
 
@@ -105,7 +108,7 @@ public class Grapple2 : MonoBehaviour
                 hook.GetComponent<Rigidbody>().isKinematic = false;
                 hook.GetComponent<Rigidbody>().useGravity = false;
                 hookDestroyed = false;
-                hook.transform.position = transform.position + Camera.main.transform.forward * 2;
+                hook.transform.position = transform.position + Camera.main.transform.forward;
                 hook.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 150;
                 grappleShoot.Play();
             }
@@ -118,9 +121,9 @@ public class Grapple2 : MonoBehaviour
                 kinematicCheck = true;
                 hitTarget = true;
                 hitPoint = hook.transform.position;
-                hookAnchor = Instantiate(prefab) as GameObject;
-                hookAnchor.transform.position = hitPoint;
-                hookAnchor.transform.SetParent(hit.collider.transform);
+                //hookAnchor = Instantiate(prefab) as GameObject;
+                //hookAnchor.transform.position = hitPoint;
+                //hookAnchor.transform.SetParent(hit.collider.transform);
                 //grappleHit.Play();
                 grapple = true;
                 dist = Vector3.Distance(transform.position, hook.transform.position);
@@ -163,7 +166,7 @@ public class Grapple2 : MonoBehaviour
             mouseUp = true;
             grapple = false;
             kinematicCheck = false;
-            Destroy(hookAnchor);
+            //Destroy(hookAnchor);
 
             if (rb.velocity.y > 0 && rb.velocity.x > 0)
             {
@@ -187,7 +190,7 @@ public class Grapple2 : MonoBehaviour
 
             if (hookDistance < 1)
             {
-                Destroy(hookAnchor);
+                //Destroy(hookAnchor);
                 Destroy(hook);
                 hookDestroyed = true;
                 mouseUp = false;
@@ -212,7 +215,7 @@ public class Grapple2 : MonoBehaviour
 
                     if (HookCollide.canDestroy)
                     {
-                        Destroy(hookAnchor);
+                        //Destroy(hookAnchor);
                         Destroy(hook);
                         hookDestroyed = true;
                         mouseUp = false;

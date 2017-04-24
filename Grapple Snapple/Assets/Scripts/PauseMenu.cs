@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour {
             {
                 Destroy(Line2.line);
                 Destroy(Grapple2.hook);
-                Destroy(Grapple2.hookAnchor);
+                //Destroy(Grapple2.hookAnchor);
                 pauseMenu.enabled = true;
                 blurScript.enabled = true;
                 controlMenu.enabled = false;
