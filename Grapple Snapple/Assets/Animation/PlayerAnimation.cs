@@ -9,22 +9,27 @@ public class PlayerAnimation : MonoBehaviour {
     public bool running;
 
 	void Start () {
-        arms = GameObject.Find("final_rig");
+        arms = GameObject.Find("Arms");
         anim = arms.GetComponent<Animator>();
         running = false;
 	}
 	
 	void Update () {
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButtonDown("Fire1"))
         {
-            anim.Play("Run", -1, 0f);
-            running = true;
+            anim.Play("ThrowGrapple", -1, 0f);
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            anim.Play("Running", -1, 0f);
+        }
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            anim.StopPlayback();
-            anim.Play("Idle", -1, 0f);
+            anim.Stop();
+            anim.StartPlayback();
         }
 	}
 }

@@ -154,6 +154,9 @@ ModelImporter:
     7400006: New_basic_rig2|ThrowGrapple
     7400008: Camera|New_basic_rig2:BodyAction
     7400010: Camera|ThrowGrapple
+    7400012: Idle
+    7400014: ThrowGrapple
+    7400016: Running
     9500000: //RootNode
     13700000: New_basic_rig2:Body
   materials:
@@ -176,7 +179,1027 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: New_basic_rig2|Idle/Running
+      takeName: New_basic_rig2|Idle/Running
+      firstFrame: 0
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: New_basic_rig2|Jump
+      takeName: New_basic_rig2|Jump
+      firstFrame: 0
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: New_basic_rig2|ThrowGrapple
+      takeName: New_basic_rig2|ThrowGrapple
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: New_basic_rig2|Idle/Running
+      firstFrame: 0
+      lastFrame: 91
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ThrowGrapple
+      takeName: New_basic_rig2|ThrowGrapple
+      firstFrame: 7.2
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Running
+      takeName: New_basic_rig2|Idle/Running
+      firstFrame: 173
+      lastFrame: 252
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: New_basic_rig2
+        weight: 1
+      - path: New_basic_rig2/clavicle.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L
+        weight: 1
+      - path: New_basic_rig2/clavicle.L/shoulder01.L/upperarm01.L/upperarm02.L/lowerarm01.L/lowerarm02.L/lowerarm02.L_end
+        weight: 1
+      - path: New_basic_rig2/clavicle.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R
+        weight: 1
+      - path: New_basic_rig2/clavicle.R/shoulder01.R/upperarm01.R/upperarm02.R/lowerarm01.R/lowerarm02.R/lowerarm02.R_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/finger1-1.L/finger1-2.L/finger1-3.L/finger1-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal1.L/finger2-1.L/finger2-2.L/finger2-3.L/finger2-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal2.L/finger3-1.L/finger3-2.L/finger3-3.L/finger3-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal3.L/finger4-1.L/finger4-2.L/finger4-3.L/finger4-3.L_end
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L
+        weight: 1
+      - path: New_basic_rig2/lowerarm02.L.001/wrist.L/metacarpal4.L/finger5-1.L/finger5-2.L/finger5-3.L/finger5-3.L_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/finger1-1.R/finger1-2.R/finger1-3.R/finger1-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal1.R/finger2-1.R/finger2-2.R/finger2-3.R/finger2-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal2.R/finger3-1.R/finger3-2.R/finger3-3.R/finger3-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal3.R/finger4-1.R/finger4-2.R/finger4-3.R/finger4-3.R_end
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R
+        weight: 1
+      - path: New_basic_rig2/wrist.R.001/wrist.R/metacarpal4.R/finger5-1.R/finger5-2.R/finger5-3.R/finger5-3.R_end
+        weight: 1
+      - path: New_basic_rig2:Body
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
