@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Animation\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\BoundariesCol.cs" />
      <Compile Include="Assets\Scripts\Climb.cs" />
      <Compile Include="Assets\Scripts\FPSDisplay.cs" />
      <Compile Include="Assets\Scripts\FPSInput.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\ProjectileCol.cs" />
      <Compile Include="Assets\Scripts\RockRotate.cs" />
      <Compile Include="Assets\Scripts\TimerUI.cs" />
+     <Compile Include="Assets\Scripts\hoopCollide.cs" />
      <Compile Include="Assets\TinyTerrain\Scripts\Rotate.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

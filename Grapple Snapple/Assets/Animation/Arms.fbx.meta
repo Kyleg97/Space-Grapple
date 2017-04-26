@@ -149,7 +149,7 @@ ModelImporter:
     400140: wrist.R.001
     4300000: New_basic_rig2:Body
     7400000: New_basic_rig2|Idle/Running
-    7400002: New_basic_rig2|Jump
+    7400002: Jump
     7400004: New_basic_rig2|New_basic_rig2:BodyAction
     7400006: New_basic_rig2|ThrowGrapple
     7400008: Camera|New_basic_rig2:BodyAction
@@ -157,6 +157,8 @@ ModelImporter:
     7400012: Idle
     7400014: ThrowGrapple
     7400016: Running
+    7400018: New_basic_rig2|Idle/Running0
+    7400020: New_basic_rig2|Jump0
     9500000: //RootNode
     13700000: New_basic_rig2:Body
   materials:
@@ -351,9 +353,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: New_basic_rig2|Jump
+      name: Jump
       takeName: New_basic_rig2|Jump
-      firstFrame: 0
+      firstFrame: 141
       lastFrame: 160
       wrapMode: 0
       orientationOffsetY: 0
@@ -863,7 +865,7 @@ ModelImporter:
     - serializedVersion: 16
       name: ThrowGrapple
       takeName: New_basic_rig2|ThrowGrapple
-      firstFrame: 7.2
+      firstFrame: 5
       lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
@@ -1034,7 +1036,7 @@ ModelImporter:
       name: Running
       takeName: New_basic_rig2|Idle/Running
       firstFrame: 173
-      lastFrame: 252
+      lastFrame: 194
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

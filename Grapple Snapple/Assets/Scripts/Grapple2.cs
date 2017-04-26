@@ -7,7 +7,7 @@ public class Grapple2 : MonoBehaviour
 {
 
     public float maxVelocity = 10.0f;
-    public float maxVelocity2 = 60.0f;
+    public float maxVelocity2 = 100.0f;
     public float swingForwardSpeed = 10.0f;
     public float swingStrafeSpeed = 10.0f;
 
@@ -253,13 +253,13 @@ public class Grapple2 : MonoBehaviour
             rb.AddForce(transform.forward * z * 10);
             rb.AddForce(transform.right * x * 10);
         }
-
+        
         if (rb.velocity.magnitude > maxVelocity2)
         {
-            rb.velocity -= (rb.velocity / 2);
+            rb.velocity -= (rb.velocity / 15);
             Debug.Log(rb.velocity.magnitude);
         }
-
+        
         if (rb.velocity.y < -10)
             ropeLength -= .2f * (40 * Time.deltaTime);
 

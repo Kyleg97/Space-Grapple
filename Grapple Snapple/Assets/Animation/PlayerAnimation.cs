@@ -21,15 +21,20 @@ public class PlayerAnimation : MonoBehaviour {
             anim.Play("ThrowGrapple", -1, 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !running)
         {
+            running = true;
             anim.Play("Running", -1, 0f);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            anim.Stop();
-            anim.StartPlayback();
+            running = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.Play("Jump", -1, 0f);
         }
 	}
 }

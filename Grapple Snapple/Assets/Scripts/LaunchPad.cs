@@ -40,7 +40,7 @@ public class LaunchPad : MonoBehaviour {
             player.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
             Grapple2.rb.constraints = RigidbodyConstraints.FreezeAll;
 
-            if (Line2.line != null && Grapple2.hook != null)// && Grapple2.hookAnchor != null)
+            if (Grapple2.hook != null)// && Grapple2.hookAnchor != null)
             {
                 Destroy(Line2.line);
                 Destroy(Grapple2.hook);
