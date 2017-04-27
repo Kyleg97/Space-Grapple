@@ -66,9 +66,10 @@
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileCol.cs" />
+     <Compile Include="Assets\Scripts\RingCollide.cs" />
+     <Compile Include="Assets\Scripts\RingSpawn.cs" />
      <Compile Include="Assets\Scripts\RockRotate.cs" />
      <Compile Include="Assets\Scripts\TimerUI.cs" />
-     <Compile Include="Assets\Scripts\hoopCollide.cs" />
      <Compile Include="Assets\TinyTerrain\Scripts\Rotate.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
