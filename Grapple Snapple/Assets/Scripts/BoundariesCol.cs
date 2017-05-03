@@ -17,7 +17,7 @@ public class BoundariesCol : MonoBehaviour {
     {
         if (col.transform.tag == "Player")
         {
-            Debug.Log("Collide!");
+            //Debug.Log("Collide!");
             player.transform.position = respawn.transform.position;
             Grapple2.rb.velocity = new Vector3(0, 0, 0);
         }

@@ -41,9 +41,11 @@ public class Grapple2 : MonoBehaviour
 
     public bool kinematicCheck;
     public static bool hookDestroyed;
-    public bool mouseUp;
+    public static bool mouseUp;
     public float hookDistance;
     public bool hitTarget;
+
+    public GameObject gamemode1;
 
     public Vector3 point1;
     public Vector3 point2;
@@ -61,6 +63,7 @@ public class Grapple2 : MonoBehaviour
         prefab2 = Resources.Load("Grapplehook") as GameObject;
         grappleShoot = GetComponent<AudioSource>();
         footStep = Resources.Load("FootStepWalk") as AudioClip;
+        gamemode1 = GameObject.Find("RingSpawn");
         kinematicCheck = false;
         hookDestroyed = true;
         mouseUp = false;
@@ -89,6 +92,11 @@ public class Grapple2 : MonoBehaviour
         if (Input.GetKey(KeyCode.P))
         {
             transform.position = point3;
+        }
+        //until RingSpawn problem while hooked to ring is gone
+        if (hook == null && Line2.line != null)
+        {
+            Destroy(Line2.line);
         }
 
 
@@ -152,11 +160,23 @@ public class Grapple2 : MonoBehaviour
                         rb.velocity -= newVel;
                     }
 
-                    if (Input.GetKey(KeyCode.E))
-                        ropeLength += .4f * (70 * Time.deltaTime);
-                    
-                    if (Input.GetKey(KeyCode.R))
-                        ropeLength -= .4f * (70 * Time.deltaTime);
+                    if (gamemode1 == null)
+                    {
+                        if (Input.GetKey(KeyCode.E))
+                            ropeLength += .4f * (70 * Time.deltaTime);
+
+                        if (Input.GetKey(KeyCode.R))
+                            ropeLength -= .4f * (70 * Time.deltaTime);
+                    }
+
+                    if (gamemode1 != null)
+                    {
+                        if (Input.GetKey(KeyCode.E))
+                            ropeLength += .4f * (100 * Time.deltaTime);
+
+                        if (Input.GetKey(KeyCode.R))
+                            ropeLength -= .5f * (120 * Time.deltaTime);
+                    }
                     
                 }
             }
@@ -245,8 +265,8 @@ public class Grapple2 : MonoBehaviour
         }
         */
 
-        if (Input.GetKey(KeyCode.T))
-            rb.AddExplosionForce(50, rb.transform.position, 50);
+        if (gamemode1 != null && Input.GetKey(KeyCode.T))
+            rb.AddExplosionForce(75, rb.transform.position, 75);
 
         if (rb.velocity.magnitude < maxVelocity)
         {
@@ -257,7 +277,7 @@ public class Grapple2 : MonoBehaviour
         if (rb.velocity.magnitude > maxVelocity2)
         {
             rb.velocity -= (rb.velocity / 15);
-            Debug.Log(rb.velocity.magnitude);
+            //Debug.Log(rb.velocity.magnitude);
         }
         
         if (rb.velocity.y < -10)

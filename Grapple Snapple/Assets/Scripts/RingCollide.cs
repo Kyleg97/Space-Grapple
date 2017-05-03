@@ -10,7 +10,6 @@ public class RingCollide : MonoBehaviour {
     {
         if (col.transform.tag == "Player")
         {
-            Debug.Log("Score!");
             score = true;
         }
     }

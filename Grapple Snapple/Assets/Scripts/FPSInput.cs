@@ -23,7 +23,7 @@ public class FPSInput : MonoBehaviour
     }
 
     void FixedUpdate()
-    {        
+    {
         if (Grapple2.isGrounded())
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -47,16 +47,16 @@ public class FPSInput : MonoBehaviour
             {
                 running = true;
                 speed = 20.0f;
-                Headbob.bobbingAmount = .1f;
-                Headbob.bobbingSpeed = .2f;
+                //Headbob.bobbingAmount = .1f;
+                //Headbob.bobbingSpeed = .2f;
             }
 
             else
             {
                 running = false;
                 speed = 12.0f;
-                Headbob.bobbingAmount = .1f;
-                Headbob.bobbingSpeed = .15f;
+                //Headbob.bobbingAmount = .1f;
+                //Headbob.bobbingSpeed = .15f;
             }
         }
 

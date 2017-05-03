@@ -12,6 +12,15 @@ public class HookCollide : MonoBehaviour {
         canDestroy = false;
     }
 
+    void Update()
+    {
+        if (RingCollide.score)
+        {
+            transform.SetParent(null);
+            Grapple2.mouseUp = true;
+        }
+    }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name != "Player" && collision.gameObject.name != "No")
