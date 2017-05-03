@@ -25,7 +25,7 @@ public class RingSpawn : MonoBehaviour {
         spawnSphereCenter = player.transform.position;
         ring = Resources.Load("CIRCLE") as GameObject;
         ringInstance = Instantiate(ring) as GameObject;
-        ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 200;
+        ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 180;
         canSpawn = false;
         canCount = true;
         playerScore = 0;
@@ -111,7 +111,7 @@ public class RingSpawn : MonoBehaviour {
         }
         ringRotation = Random.Range(1, 7);
         ringInstance = Instantiate(ring) as GameObject;
-        ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 200;
+        ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 180;
         ringInstance.transform.rotation = rotation;
         canSpawn = false;
         //canCount = true;

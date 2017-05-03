@@ -268,6 +268,9 @@ public class Grapple2 : MonoBehaviour
         if (gamemode1 != null && Input.GetKey(KeyCode.T))
             rb.AddExplosionForce(75, rb.transform.position, 75);
 
+        if (gamemode1 == null && Input.GetKey(KeyCode.F))
+            rb.AddExplosionForce(40, rb.transform.position, 40);
+
         if (rb.velocity.magnitude < maxVelocity)
         {
             rb.AddForce(transform.forward * z * 10);
