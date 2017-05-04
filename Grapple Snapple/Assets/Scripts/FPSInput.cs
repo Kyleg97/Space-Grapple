@@ -24,7 +24,7 @@ public class FPSInput : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Grapple2.isGrounded())
+        if (Grapple2.isGrounded()) // || Grapple.isGrounded())
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             targetVelocity = transform.TransformDirection(targetVelocity);

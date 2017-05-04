@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\RingCollide.cs" />
      <Compile Include="Assets\Scripts\RingSpawn.cs" />
      <Compile Include="Assets\Scripts\RockRotate.cs" />
+     <Compile Include="Assets\Scripts\RocketBoots.cs" />
      <Compile Include="Assets\Scripts\TimerUI.cs" />
      <Compile Include="Assets\TinyTerrain\Scripts\Rotate.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

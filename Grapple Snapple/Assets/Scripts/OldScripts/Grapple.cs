@@ -67,7 +67,7 @@ public class Grapple : MonoBehaviour
                     hookAnchor = Instantiate(prefab) as GameObject;
                     hookAnchor.transform.position = hitPoint;
                     hookAnchor.transform.SetParent(hit.collider.transform);
-                    grappleHit.Play();
+                    //grappleHit.Play();
                     //hitPoint = hookAnchor.transform.position;
                     //Debug.Log("GameObject: " + hookAnchor.transform.position);
                     //Debug.Log("Hit Collider: " + hit.collider.transform.position);

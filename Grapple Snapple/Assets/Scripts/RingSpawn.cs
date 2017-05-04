@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RingSpawn : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class RingSpawn : MonoBehaviour {
     public Line2 lineScript;
     public GameObject line;
     public int playerScore;
+    public Text scoreText;
 
     void Start () {
         player = GameObject.Find("Player");
@@ -83,6 +85,16 @@ public class RingSpawn : MonoBehaviour {
         }
     }
 
+    void FixedUpdate()
+    {
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        scoreText.text = "Score: " + playerScore;
+    }
+
     public void spawn()
     {
         switch (ringRotation)
@@ -134,6 +146,4 @@ public class RingSpawn : MonoBehaviour {
             canSpawn = true;
         }
     }
-
-
 }
