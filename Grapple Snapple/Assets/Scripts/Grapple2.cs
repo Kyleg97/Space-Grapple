@@ -51,6 +51,8 @@ public class Grapple2 : MonoBehaviour
     public Vector3 point2;
     public Vector3 point3;
 
+    public static bool canThrow;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -68,6 +70,7 @@ public class Grapple2 : MonoBehaviour
         hookDestroyed = true;
         mouseUp = false;
         hitTarget = false;
+        canThrow = false;
 
         if (GameObject.Find("point1") != null)
         {
@@ -80,6 +83,8 @@ public class Grapple2 : MonoBehaviour
 
     void Update()
     {
+
+        canThrow = false;
 
         if (Input.GetKey(KeyCode.I))
         {
@@ -111,7 +116,6 @@ public class Grapple2 : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
-                //animate throw
                 //PlayerAnimation.anim.Play("Throw", -1, 0f);
                 hook = Instantiate(prefab2) as GameObject;
                 hook.GetComponent<Rigidbody>().isKinematic = false;
@@ -120,6 +124,7 @@ public class Grapple2 : MonoBehaviour
                 hook.transform.position = transform.position + Camera.main.transform.forward;
                 hook.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 150;
                 grappleShoot.Play();
+                canThrow = true;
             }
         }
 
@@ -230,9 +235,9 @@ public class Grapple2 : MonoBehaviour
             {
                 mouseUp = true;
 
-                if (mouseUp)
-                {
-                    hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 1);
+               // if (mouseUp)
+               // {
+                  //  hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 1.5f);
 
                     if (HookCollide.canDestroy)
                     {
@@ -243,7 +248,7 @@ public class Grapple2 : MonoBehaviour
                         grapple = false;
                         hitTarget = false;
                     }
-                }
+               // }
 
             }
         }
@@ -296,7 +301,7 @@ public class Grapple2 : MonoBehaviour
         if (!isGrounded())
         {
             rb.AddForce(transform.forward * z * 5);
-            rb.AddForce(transform.right * x * 5);
+            rb.AddForce(transform.right * x * 5);   
         }
 
     }

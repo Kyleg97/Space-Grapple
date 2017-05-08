@@ -18,9 +18,15 @@ public class RocketBoots : MonoBehaviour {
 
     public float maxVelocity = 45f;
 
+    public AudioSource startRocket;
+    public AudioSource loopRocket;
+
 	void Start () {
         rb = GetComponent<Rigidbody>();
         ringSpawn = GameObject.Find("RingSpawn");
+
+        startRocket = GameObject.Find("RocketBootsSound").GetComponent<AudioSource>();
+        loopRocket = GameObject.Find("RocketBootsSound2").GetComponent<AudioSource>();
 
         flying = false;
 	}
@@ -39,18 +45,38 @@ public class RocketBoots : MonoBehaviour {
 
         if (flying)
         {
-            currentFuel -= Time.deltaTime * 1.5f;
+            if (Input.GetKeyDown(KeyCode.F) && !startRocket.isPlaying)
+            {
+                startRocket.Play();
+            }
+
+            if (!startRocket.isPlaying && !loopRocket.isPlaying)
+            {
+                loopRocket.Play();
+            }
+
+            currentFuel -= Time.deltaTime * 1.2f;
             rb.AddExplosionForce(currentFuel * 15, rb.transform.position, currentFuel * 15);
 
             if (currentFuel <= 0)
             {
                 currentFuel = 0;
                 flying = false;
+                loopRocket.Stop();
+                startRocket.Stop();
             }
 
             if (!Input.GetKey(KeyCode.F))
             {
                 flying = false;
+                loopRocket.Stop();
+                startRocket.Stop();
+            }
+
+            if (RingSpawn._gameOver)
+            {
+                loopRocket.Stop();
+                startRocket.Stop();
             }
         }
 

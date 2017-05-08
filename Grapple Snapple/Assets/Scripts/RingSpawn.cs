@@ -1,52 +1,111 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityStandardAssets.ImageEffects;
 
 public class RingSpawn : MonoBehaviour {
 
     public GameObject ring;
     public GameObject ringInstance;
     public GameObject player;
+
+    public GameObject cam;
+
     public Vector3 spawnSphereCenter;
     public int ringRotation;
     public Quaternion rotation;
     public bool canSpawn;
-    public bool canCount;
+
+    public GameObject line;
+
+    public int playerScore;
+    public float timeLeft;
+
+    public float timeUntilStart;
+    public Text _timeUntilStart;
+
+    public Text scoreText;
+    public Text timeText;
+    public Text finalScore;
+
+    public AudioSource warpSpawn;
+
+    public MouseLook mouseScript;
+    public FPSInput fpsScript;
     public Grapple2 grappleScript;
     public Line2 lineScript;
-    public GameObject line;
-    public int playerScore;
-    public Text scoreText;
+    public RocketBoots rocketScript;
+    public BlurOptimized blurScript;
+
+    public static bool _gameOver;
+    public Canvas gameOver;
+
 
     void Start () {
         player = GameObject.Find("Player");
+        cam = GameObject.Find("Main Camera");
         line = GameObject.Find("Line");
-        grappleScript = player.GetComponent<Grapple2>();
-        lineScript = line.GetComponent<Line2>();
         spawnSphereCenter = player.transform.position;
         ring = Resources.Load("CIRCLE") as GameObject;
         ringInstance = Instantiate(ring) as GameObject;
         ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 180;
         canSpawn = false;
-        canCount = true;
+        gameOver.enabled = false;
         playerScore = 0;
+        timeLeft = 5.0f;
+        timeUntilStart = 4;
+
+        blurScript = cam.GetComponent<BlurOptimized>();
+        mouseScript = cam.GetComponent<MouseLook>();
+        fpsScript = player.GetComponent<FPSInput>();
+        grappleScript = player.GetComponent<Grapple2>();
+        lineScript = line.GetComponent<Line2>();
+        rocketScript = player.GetComponent<RocketBoots>();
+        blurScript.enabled = false;
+        _gameOver = false;
     }
 	
 	void Update () {
-		
+
+        if (timeUntilStart > 1)
+        {
+            mouseScript.enabled = false;
+            fpsScript.enabled = false;
+            grappleScript.enabled = false;
+            lineScript.enabled = false;
+            rocketScript.enabled = false;
+            blurScript.enabled = true;
+            timeUntilStart -= Time.deltaTime;
+        }
+
+        if (timeUntilStart < 1)
+        {
+            timeUntilStart = 0;
+            _timeUntilStart.enabled = false;
+            mouseScript.enabled = true;
+            fpsScript.enabled = true;
+            grappleScript.enabled = true;
+            lineScript.enabled = true;
+            rocketScript.enabled = true;
+            blurScript.enabled = false;
+        }
+
+        if (timeUntilStart <= 0)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 1)
+            {
+                timeLeft = 0;
+                timeText.text = "Time: " + 0;
+                GameOver();
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Y))
         {
             player.transform.position = ringInstance.transform.position;
-        }
-        
-        if (ringInstance != null && canCount)
-        {
-            if (canCount)
-            {
-                //StartCoroutine(spawnWait());
-                canCount = false;
-            }
         }
         
         if (ringInstance == null && canSpawn)
@@ -93,6 +152,9 @@ public class RingSpawn : MonoBehaviour {
     public void UpdateUI()
     {
         scoreText.text = "Score: " + playerScore;
+        timeText.text = "Time: " + timeLeft.ToString("F2");
+        finalScore.text = "FINAL SCORE:  " + playerScore;
+        _timeUntilStart.text = (int)timeUntilStart + "";
     }
 
     public void spawn()
@@ -123,11 +185,11 @@ public class RingSpawn : MonoBehaviour {
         }
         ringRotation = Random.Range(1, 7);
         ringInstance = Instantiate(ring) as GameObject;
+        warpSpawn = ringInstance.GetComponent<AudioSource>();
+        warpSpawn.Play();
         ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 180;
         ringInstance.transform.rotation = rotation;
         canSpawn = false;
-        //canCount = true;
-        //spawnWaitFun();
     }
 
     public void spawnWaitFun()
@@ -145,5 +207,32 @@ public class RingSpawn : MonoBehaviour {
             Grapple2.hookDestroyed = true;
             canSpawn = true;
         }
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        mouseScript.enabled = false;
+        fpsScript.enabled = false;
+        grappleScript.enabled = false;
+        lineScript.enabled = false;
+        rocketScript.enabled = false;
+        blurScript.enabled = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        _gameOver = true;
+        gameOver.enabled = true;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

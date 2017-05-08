@@ -13,6 +13,7 @@ public class FPSInput : MonoBehaviour
     Rigidbody rb;
     public static bool running;
     public static bool canDisable;
+    public static bool jumpAni;
 
     void Awake()
     {
@@ -20,10 +21,13 @@ public class FPSInput : MonoBehaviour
         rb.freezeRotation = true;
         rb.useGravity = true;
         canDisable = false;
+        jumpAni = false;
     }
 
     void FixedUpdate()
     {
+        jumpAni = false;
+
         if (Grapple2.isGrounded()) // || Grapple.isGrounded())
         {
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -40,6 +44,7 @@ public class FPSInput : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
+                jumpAni = true;
                 rb.velocity = new Vector3(velocity.x, JumpVerticalSpeed() * 1.5f , velocity.z); //1.5---->1.8
             }
 

@@ -16,23 +16,31 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	void Update () {
 
-        if (Input.GetButtonDown("Fire1"))
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        if (Grapple2.canThrow)
         {
             anim.Play("ThrowGrapple", -1, 0f);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && !running)
+        if (Input.GetKey(KeyCode.LeftShift) && Grapple2.isGrounded())
         {
             running = true;
-            anim.Play("Running", -1, 0f);
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Running") && running)
+            {
+                anim.Play("Running", -1, 0f);
+            }
+            else
+                running = false;
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (!Input.GetKey(KeyCode.LeftShift))
         {
             running = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (FPSInput.jumpAni)
         {
             anim.Play("Jump", -1, 0f);
         }
