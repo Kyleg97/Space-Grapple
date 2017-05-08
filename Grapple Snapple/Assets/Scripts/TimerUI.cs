@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimerUI : MonoBehaviour {
 
-    public Text timerText;
+    public static Text timerText;
 
     public float seconds;
     public float minutes;
@@ -18,5 +18,10 @@ public class TimerUI : MonoBehaviour {
         minutes = (int) (Time.timeSinceLevelLoad / 60f);
         seconds = (int) (Time.timeSinceLevelLoad % 60f);
         timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
+        if (GM1Score.score > 0)
+        {
+            seconds -= GM1Score.score * 3;
+        }
 	}
 }

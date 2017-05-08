@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour {
     public Button scores;
     public Button exit;
     public Image vSyncCheck;
+    public Canvas controlMenu;
 
 	void Start ()
     {
@@ -24,6 +25,7 @@ public class MainMenu : MonoBehaviour {
         exit = exit.GetComponent<Button>();
         vSyncCheck = vSyncCheck.GetComponent<Image>();
         quitMenu.enabled = false;
+        controlMenu.enabled = false;
         settingsMenu.enabled = false;
 	}
 
@@ -68,6 +70,7 @@ public class MainMenu : MonoBehaviour {
     {
         quitMenu.enabled = false;
         settingsMenu.enabled = false;
+        controlMenu.enabled = false;
         play.enabled = true;
         settings.enabled = true;
         scores.enabled = true;
@@ -87,6 +90,17 @@ public class MainMenu : MonoBehaviour {
             vSyncCheck.enabled = false;
             QualitySettings.vSyncCount = 0;
         }
+    }
+
+    public void ControlsPress()
+    {
+        controlMenu.enabled = true;
+        quitMenu.enabled = false;
+        settingsMenu.enabled = false;
+        play.enabled = false;
+        settings.enabled = false;
+        scores.enabled = false;
+        exit.enabled = false;
     }
 
     public void PlayGame()

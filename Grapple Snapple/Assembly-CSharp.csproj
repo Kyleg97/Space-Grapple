@@ -53,8 +53,8 @@
      <Compile Include="Assets\Scripts\FPSInput.cs" />
      <Compile Include="Assets\Scripts\Float.cs" />
      <Compile Include="Assets\Scripts\FloatRotate.cs" />
+     <Compile Include="Assets\Scripts\GM1Score.cs" />
      <Compile Include="Assets\Scripts\GM2RingCollide.cs" />
-     <Compile Include="Assets\Scripts\GM2Score.cs" />
      <Compile Include="Assets\Scripts\Grapple2.cs" />
      <Compile Include="Assets\Scripts\HookCollide.cs" />
      <Compile Include="Assets\Scripts\InvisWallTrigger.cs" />
@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\RockRotate.cs" />
      <Compile Include="Assets\Scripts\RocketBoots.cs" />
      <Compile Include="Assets\Scripts\TimerUI.cs" />
+     <Compile Include="Assets\Scripts\gm1Finish.cs" />
      <Compile Include="Assets\TinyTerrain\Scripts\Rotate.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

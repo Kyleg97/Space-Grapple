@@ -16,7 +16,7 @@ public class GM2RingCollide : MonoBehaviour {
     {
         if (col.transform.tag == "Player")
         {
-            GM2Score.canIncrement = true;
+            GM1Score.canIncrement = true;
             Destroy(gameObject);
             //StartCoroutine(destroyWait());
         }

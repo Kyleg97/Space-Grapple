@@ -5,184 +5,72 @@ Direct3D:
     Renderer: NVIDIA GeForce 940MX (ID=0x179c)
     Vendor:   NVIDIA
     VRAM:     2019 MB
-    Driver:   21.20.16.4534
+    Driver:   22.21.13.8205
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.195 seconds
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\Testrun_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.189 seconds
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\kyleg\Documents\GitHub\Grapple-Snapple\Grapple Snapple\TestRun_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.408592 ms
+UnloadTime: 5.608960 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1628 -> priority: 1 
+  Thread -> id: 1dd4 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-The tree AG01_1 couldn't be instanced because the prefab contains no valid mesh renderer.
- 
-(Filename:  Line: 160)
+UnloadTime: 4.264017 ms
 
-UnloadTime: 4.458482 ms
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1589.
+Total: 0.849178 ms (FindLiveObjects: 0.114784 ms CreateObjectMapping: 0.056259 ms MarkObjects: 0.612813 ms  DeleteObjects: 0.064943 ms)
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3194.
-Total: 1.638326 ms (FindLiveObjects: 0.135929 ms CreateObjectMapping: 0.056259 ms MarkObjects: 0.503693 ms  DeleteObjects: 0.942443 ms)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Collision with launch
+Score: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Starting launch...
+(19.0, 50.6, 11.1)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Launch!
+Score: 2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Forward!
+Score: 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at Line2.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Die
+(22.0, 50.2, -7.7)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(-2.8, 50.1, -10.7)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Score: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Score: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.351239 ms
+
+Unloading 184 unused Assets to reduce memory usage. Loaded Objects now: 1592.
+Total: 2.894533 ms (FindLiveObjects: 0.175574 ms CreateObjectMapping: 0.126867 ms MarkObjects: 1.086299 ms  DeleteObjects: 1.504658 ms)
 

@@ -39,6 +39,8 @@ public class RingSpawn : MonoBehaviour {
     public RocketBoots rocketScript;
     public BlurOptimized blurScript;
 
+    public bool gameStart;
+
     public static bool _gameOver;
     public Canvas gameOver;
 
@@ -53,9 +55,11 @@ public class RingSpawn : MonoBehaviour {
         ringInstance.transform.position = spawnSphereCenter + Random.insideUnitSphere * 180;
         canSpawn = false;
         gameOver.enabled = false;
+        gameStart = false;
         playerScore = 0;
-        timeLeft = 5.0f;
+        timeLeft = 90.0f;
         timeUntilStart = 4;
+        Time.timeScale = 1;
 
         blurScript = cam.GetComponent<BlurOptimized>();
         mouseScript = cam.GetComponent<MouseLook>();
@@ -80,8 +84,9 @@ public class RingSpawn : MonoBehaviour {
             timeUntilStart -= Time.deltaTime;
         }
 
-        if (timeUntilStart < 1)
+        if (timeUntilStart < 1 && !gameStart)
         {
+            gameStart = true;
             timeUntilStart = 0;
             _timeUntilStart.enabled = false;
             mouseScript.enabled = true;
@@ -228,6 +233,21 @@ public class RingSpawn : MonoBehaviour {
 
     public void Restart()
     {
+        /*
+        Time.timeScale = 1;
+        mouseScript.enabled = true;
+        fpsScript.enabled = true;
+        grappleScript.enabled = true;
+        lineScript.enabled = true;
+        rocketScript.enabled = true;
+        blurScript.enabled = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        _gameOver = false;
+        gameOver.enabled = false;
+        */
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
