@@ -56,7 +56,7 @@ public class RocketBoots : MonoBehaviour {
             }
 
             currentFuel -= Time.deltaTime * 1.2f;
-            rb.AddExplosionForce(currentFuel * 15, rb.transform.position, currentFuel * 15);
+            rb.AddExplosionForce(currentFuel * 20, rb.transform.position, currentFuel * 20);
 
             if (currentFuel <= 0)
             {

@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class Grapple2 : MonoBehaviour
 {
-
     public float maxVelocity = 10.0f;
     public float maxVelocity2 = 100.0f;
     public float swingForwardSpeed = 10.0f;
     public float swingStrafeSpeed = 10.0f;
-
-    //public float momentum;
 
     public static float groundDist;
     Collider col;
@@ -27,15 +24,12 @@ public class Grapple2 : MonoBehaviour
     private Vector3 newVel;
     public float distance;
 
-    //public static GameObject hookAnchor;
     public GameObject prefab;
 
     public static GameObject hook;
     public GameObject prefab2;
 
     public AudioSource grappleShoot;
-    //public AudioSource grappleHit;
-    public AudioClip footStep;
 
     public Vector3 hookDir;
 
@@ -47,10 +41,6 @@ public class Grapple2 : MonoBehaviour
 
     public GameObject gamemode1;
 
-    public Vector3 point1;
-    public Vector3 point2;
-    public Vector3 point3;
-
     public static bool canThrow;
 
     void Awake()
@@ -61,23 +51,14 @@ public class Grapple2 : MonoBehaviour
     void Start()
     {
         groundDist = col.bounds.extents.y;
-        //prefab = Resources.Load("HookAnchor") as GameObject;
         prefab2 = Resources.Load("Grapplehook") as GameObject;
         grappleShoot = GetComponent<AudioSource>();
-        footStep = Resources.Load("FootStepWalk") as AudioClip;
         gamemode1 = GameObject.Find("RingSpawn");
         kinematicCheck = false;
         hookDestroyed = true;
         mouseUp = false;
         hitTarget = false;
         canThrow = false;
-
-        if (GameObject.Find("point1") != null)
-        {
-            point1 = GameObject.Find("point1").transform.position;
-            point2 = GameObject.Find("point2").transform.position;
-            point3 = GameObject.Find("point3").transform.position;
-        }
     }
 
 
@@ -85,25 +66,12 @@ public class Grapple2 : MonoBehaviour
     {
 
         canThrow = false;
-
-        if (Input.GetKey(KeyCode.I))
-        {
-            transform.position = point1;
-        }
-        if (Input.GetKey(KeyCode.O))
-        {
-            transform.position = point2;
-        }
-        if (Input.GetKey(KeyCode.P))
-        {
-            transform.position = point3;
-        }
-        //until RingSpawn problem while hooked to ring is gone
+        
         if (hook == null && Line2.line != null)
         {
             Destroy(Line2.line);
         }
-
+        
 
         if (hook != null)
         {
@@ -116,7 +84,6 @@ public class Grapple2 : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
             {
-                //PlayerAnimation.anim.Play("Throw", -1, 0f);
                 hook = Instantiate(prefab2) as GameObject;
                 hook.GetComponent<Rigidbody>().isKinematic = false;
                 hook.GetComponent<Rigidbody>().useGravity = false;
@@ -135,10 +102,6 @@ public class Grapple2 : MonoBehaviour
                 kinematicCheck = true;
                 hitTarget = true;
                 hitPoint = hook.transform.position;
-                //hookAnchor = Instantiate(prefab) as GameObject;
-                //hookAnchor.transform.position = hitPoint;
-                //hookAnchor.transform.SetParent(hit.collider.transform);
-                //grappleHit.Play();
                 grapple = true;
                 dist = Vector3.Distance(transform.position, hook.transform.position);
                 ropeLength = dist;
@@ -192,7 +155,6 @@ public class Grapple2 : MonoBehaviour
             mouseUp = true;
             grapple = false;
             kinematicCheck = false;
-            //Destroy(hookAnchor);
 
             if (rb.velocity.y > 0 && rb.velocity.x > 0)
             {
@@ -205,18 +167,17 @@ public class Grapple2 : MonoBehaviour
         if (mouseUp && !hitTarget && hook != null)
         {
             //Debug.Log(hitTarget);
-            hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 300 * Time.deltaTime);
+            hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 500 * Time.deltaTime);
             hitTarget = false;
         }
 
         if (mouseUp && hook != null)
         {
-            hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 200 * Time.deltaTime);
+            hook.transform.position = Vector3.MoveTowards(hook.transform.position, transform.position, 500 * Time.deltaTime);
             hook.GetComponent<SphereCollider>().enabled = false;
 
             if (hookDistance < 1)
             {
-                //Destroy(hookAnchor);
                 Destroy(hook);
                 hookDestroyed = true;
                 mouseUp = false;
@@ -241,7 +202,6 @@ public class Grapple2 : MonoBehaviour
 
                     if (HookCollide.canDestroy)
                     {
-                        //Destroy(hookAnchor);
                         Destroy(hook);
                         hookDestroyed = true;
                         mouseUp = false;
@@ -259,7 +219,6 @@ public class Grapple2 : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-
         /*
         if (Input.GetKey(KeyCode.R) && isGrounded() && rb.velocity.magnitude > 3)
         {

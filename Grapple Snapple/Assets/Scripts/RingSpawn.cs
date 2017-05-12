@@ -107,11 +107,6 @@ public class RingSpawn : MonoBehaviour {
                 GameOver();
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            player.transform.position = ringInstance.transform.position;
-        }
         
         if (ringInstance == null && canSpawn)
         {
@@ -119,15 +114,11 @@ public class RingSpawn : MonoBehaviour {
             canSpawn = false;
         }
 
-        if (Grapple2.hook != null  && Grapple2.hook.transform.IsChildOf(ringInstance.transform))
-        {
-            //Debug.Log("hi mom");
-        }
-
         if(Grapple2.hook == null && RingCollide.score)
         {
             RingCollide.score = false;
             playerScore++;
+            timeLeft += 5;
             Debug.Log("Score: " + playerScore);
             Destroy(ringInstance);
             canSpawn = true;
@@ -143,6 +134,7 @@ public class RingSpawn : MonoBehaviour {
                 canSpawn = true;
                 RingCollide.score = false;
                 playerScore++;
+                timeLeft += 5;
                 Debug.Log("Score: " + playerScore);
                 Destroy(ringInstance);
             }
@@ -173,7 +165,7 @@ public class RingSpawn : MonoBehaviour {
                 rotation = Quaternion.Euler(0, 180, 0);
                 break;
             case 3:
-                rotation = Quaternion.Euler(0, 0, 0);
+                rotation = Quaternion.Euler(70, 0, 0);
                 break;
             case 4:
                 rotation = Quaternion.Euler(90, 0, 90);
@@ -187,8 +179,11 @@ public class RingSpawn : MonoBehaviour {
             case 7:
                 rotation = Quaternion.Euler(30, 180, 90);
                 break;
+            case 8:
+                rotation = Quaternion.Euler(0, 0, 0);
+                break;
         }
-        ringRotation = Random.Range(1, 7);
+        ringRotation = Random.Range(1, 8);
         ringInstance = Instantiate(ring) as GameObject;
         warpSpawn = ringInstance.GetComponent<AudioSource>();
         warpSpawn.Play();
@@ -233,21 +228,6 @@ public class RingSpawn : MonoBehaviour {
 
     public void Restart()
     {
-        /*
-        Time.timeScale = 1;
-        mouseScript.enabled = true;
-        fpsScript.enabled = true;
-        grappleScript.enabled = true;
-        lineScript.enabled = true;
-        rocketScript.enabled = true;
-        blurScript.enabled = false;
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        _gameOver = false;
-        gameOver.enabled = false;
-        */
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

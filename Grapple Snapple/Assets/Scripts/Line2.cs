@@ -34,15 +34,6 @@ public class Line2 : MonoBehaviour
             line.SetPosition(1, Grapple2.hook.transform.position);
         }
 
-        /*
-                if (line != null)
-                    line.SetPosition(1, lineHit);
-
-                if (hit.collider != null)
-                    lineHit = hit.collider.transform.position;
-        */
-
-
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 150) && hit.collider.name != "No")
         {
             //Debug.Log("In Range!");
@@ -78,41 +69,9 @@ public class Line2 : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Fire1"))
-        {
-            //Destroy(line);
-        }
-
         if (Grapple2.hookDestroyed)
         {
             Destroy(line);
         }
-
-        /*
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 300) && hit.collider.name != "Roof")
-            {
-                if (Grapple.canGo)
-                {
-                    lineHit = hit.point;
-                    lineObj.AddComponent<LineRenderer>();
-                    line = lineObj.GetComponent<LineRenderer>();
-                    line.SetPosition(0, playerPos);
-                    line.SetPosition(1, lineHit);
-                    line.useWorldSpace = true;
-                    line.startWidth = 0.08f;
-                    line.endWidth = 0.06f;
-                    line.material = new Material(Shader.Find("Standard"));
-                    line.material.color = Color.black;
-                }
-            }
-        }
-
-        if (Grapple.tooFast)
-        {
-            Destroy(line);
-        }
-        */
     }
 }
