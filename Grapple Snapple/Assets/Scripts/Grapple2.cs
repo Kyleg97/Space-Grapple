@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class Grapple2 : MonoBehaviour
 {
-    public float maxVelocity = 10.0f;
+    public float maxVel = 10.0f;
     public float maxVelocity2 = 100.0f;
-    public float swingForwardSpeed = 10.0f;
-    public float swingStrafeSpeed = 10.0f;
 
     public static float groundDist;
     Collider col;
@@ -18,7 +16,7 @@ public class Grapple2 : MonoBehaviour
     public static bool grapple = false;
     public static Rigidbody rb;
 
-    private float dist;
+    private float pointDist;
     public static Vector3 hitPoint;
     public static RaycastHit hit;
     private Vector3 newVel;
@@ -103,8 +101,8 @@ public class Grapple2 : MonoBehaviour
                 hitTarget = true;
                 hitPoint = hook.transform.position;
                 grapple = true;
-                dist = Vector3.Distance(transform.position, hook.transform.position);
-                ropeLength = dist;
+                pointDist = Vector3.Distance(transform.position, hook.transform.position);
+                ropeLength = pointDist;
             }
         }
 
@@ -235,7 +233,7 @@ public class Grapple2 : MonoBehaviour
         if (gamemode1 == null && Input.GetKey(KeyCode.F))
             rb.AddExplosionForce(40, rb.transform.position, 40);
         */
-        if (rb.velocity.magnitude < maxVelocity)
+        if (rb.velocity.magnitude < maxVel)
         {
             rb.AddForce(transform.forward * z * 10);
             rb.AddForce(transform.right * x * 10);
