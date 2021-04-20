@@ -1,4 +1,4 @@
-# Grapple Snapple (Space Grapple?)
+# Space Grapple
 A 3D Grappling Hook game
 
 Kyle Gilbert - kyle.gilbert1622@gmail.com
